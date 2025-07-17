@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+
+/* Custom styles */
+:root {
+  --primary-color: #3498db !important; /* Example primary color */
+  --secondary-color: #e74c3c ; /* Example secondary color */
+  --background-color: #fff !important; /* Body background color */
+  --text-color: #000; /* Default text color */
+  --heading-color:#4D4D4C !important;
+
+  
+}
+
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Rose", serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Red Rose", serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--heading-color) !important;  /* Example of heading color */
+}
+
+p {
+  font-family: 'Sora', sans-serif !important;
+  font-size: 18px;
+}
+
+a.fs-5 {
+    font-size: 24px !important;
+}
+
+/* common class css start */
+
+.heading-bold {
+  font-size: 55px;
+  font-weight: normal;
+}
+.pt-50{
+  padding-top: 50px;
+}
+.pt-70{
+  padding-top: 70px;
+}
+.pb-50{
+  padding-bottom: 50px;
+}
+.pb-70{
+  padding-bottom: 70px;
+}
+.pt-120{
+  padding-top: 120px;
+}
+
+.mt-50{
+  margin-top: 50px;
+}
+.mb-50{
+  margin-bottom: 50px;
+}
+.mb-70{
+  margin-bottom: 70px;
+}
+.mt-70{
+  margin-top: 70px;
+}
+.mt-100{
+  margin-top: 100px;
+}
+
+input{
+  /* background-color: #000 !important; */
+  border: 1px solid#fff !important;
+  border-radius: 0px !important;
+  color: #000 !important;
+}
+textarea{
+  /* background-color: #000 !important; */
+  border: 1px solid#fff !important;
+  border-radius: 0px !important;
+  color: #000 !important;
+
+}
+.button-primary{
+  background-color: #fff !important;
+  color: #000 !important;
+  border-radius: 50px !important;
+  font-size: 16px !important;
+  font-family: 'Hakobi', sans-serif !important;
+  font-weight: 900 !important;
+}
+/* common class css close */
+
+
+
+
+/* toggle header close */
+.btn-close-custom {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute !important;
+    top: 1rem;
+    right: 15px !important;
+  }
+
+  .bg-main{
+    /* background-image: url(../images/common/bg-1.gif); */
+    background-size: cover;
+    background-position: center;
+    /* padding: 100px 0px; */
+  }
+
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  position: relative;
+}
+
+.fade-in {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.fade-in.hidden {
+  opacity: 0;
+  display: none; 
+} */
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+}
+
+/* home css */
+.home-viedo{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1;  
+  display: block;                
+}
+
+.mobile-viedo{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; 
+  z-index: -1; 
+  display: none;   
+}
+
+.custom-date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Inverts the icon color to white */
+}
+.custom-date-input {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white; /* Optional: style the border */
+  padding: 5px;
+}

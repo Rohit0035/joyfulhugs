@@ -1,0 +1,49 @@
+.team-culture-section {
+  width: 100%;
+}
+
+.team-culture-row {
+  display: flex;
+  min-height: 100%;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.know-us-link {
+  margin-top: auto;
+  text-align: right;
+}
+
+.know-us {
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.know-us:hover {
+  color: #007bff;
+}
+
+.image-panel {
+  display: flex;
+}
+
+.image-panel img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+img.mt-moon {
+    position: relative;
+    width: 62%;
+    right: -70px;
+    top: -145px;
+}

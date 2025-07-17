@@ -1,0 +1,51 @@
+/* Loader.css */
+.loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; /* Black background */
+  }
+  
+  .zebra {
+    width: 50px;
+    height: 50px;
+    background: url('../images/common/zebra.jpg') no-repeat center/contain;
+    animation: zebraRun 1s infinite linear;
+  }
+  
+  @keyframes zebraRun {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100px); /* Adjust the distance to suit */
+    }
+  }
+  
+  .progress-bar {
+    position: relative;
+    width: 60%;
+    height: 5px;
+    background-color: #333; /* Dark gray bar */
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    width: 0;
+    height: 100%;
+    background-color: white; /* White progress */
+    animation: progressMove 3s infinite;
+  }
+  
+  @keyframes progressMove {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  

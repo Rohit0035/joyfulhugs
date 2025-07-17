@@ -1,0 +1,45 @@
+.join-team-section {
+  position: relative;
+  background-image: url('../images/coms/jointeamhome.png'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  /* height: 500px; */
+  padding: 450px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #333;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 13%;
+  left: 9%;
+}
+
+/* .overlay-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+} */
+
+/* .overlay-text p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #555;
+} */
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 120px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+img.mty {
+    width: 100px;
+    position: relative;
+    top: 2px;
+    right: 70px;
+}
