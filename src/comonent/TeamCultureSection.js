@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import '../assets/css/TeamCultureSection.css';
 import TeamCul1 from "../assets/images/coms/teamcul-1.png";
 import TeamCul2 from "../assets/images/coms/teamcul-2.png";
@@ -13,41 +13,61 @@ const TeamCultureSection = () => {
         AOS.init({ duration: 1000, once: false });
     }, []);
     return (
-        <section className="team-culture-section mt-5">
-            <Row className="g-0 align-items-stretch h-100 team-culture-row">
-                {/* Left Text Column */}
-                <Col md="4" className="left-panel">
-                    <div className="text-content text-center" data-aos="zoom-in">
-                        <h1 className="mb-1 heading-bold ">Team &</h1>
-                        <h1 className="mb-3 heading-bold">Culture</h1>
-                        <img src={Chand} alt='juyful' className='mt-moon' />
-                    </div>
-                    <div className="know-us-link pe-5">
-                        <Link to="/about" className="know-us text-decoration-none fs-5">know us</Link>
-                    </div>
-                </Col>
+        <>
+            <section className="pt-70 pb-70">
+                <Container>
+                    <Row>
+                        <Col md='5'>
+                            <h1 className="heading-bold">
+                                We are grown
+                                up dreamers.
+                            </h1>
+                        </Col>
+                        <Col md='7'>
+                            <p className="mt-0  mb-0">
+                                We build brands that challenge, uplift, and awaken because the world doesn’t change when people know more – it change when they start living what they believe.
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className="team-culture-section ">
+                <Row className="g-0 align-items-stretch h-100 team-culture-row">
+                    {/* Left Text Column */}
+                    <Col md="4" className="left-panel">
+                        <div className="text-content text-center" data-aos="zoom-in">
+                            <h1 className="mb-1 heading-bold ">Team &</h1>
+                            <h1 className="mb-3 heading-bold">Culture</h1>
+                            <img src={Chand} alt='juyful' className='mt-moon' />
+                        </div>
+                        <div className="know-us-link pe-5">
+                            <Link to="/about" className="know-us text-decoration-none fs-5">know us</Link>
+                        </div>
+                    </Col>
 
-                {/* Image 1 */}
-                <Col md="4" className="image-panel d-none d-md-block px-md-1">
-                    <img
-                        src={TeamCul1}
-                        alt="Team Member 1"
-                        className="img-fluid"
-                        data-aos="zoom-in"
-                    />
-                </Col>
+                    {/* Image 1 */}
+                    <Col md="4" className="image-panel d-md-block px-md-1 mb-1">
+                        <img
+                            src={TeamCul1}
+                            alt="Team Member 1"
+                            className="img-fluid"
+                            data-aos="zoom-in"
+                        />
+                    </Col>
 
-                {/* Image 2 */}
-                <Col md="4" className="image-panel">
-                    <img
-                        src={TeamCul2}
-                        alt="Team Member 2"
-                        className="img-fluid"
-                        data-aos="zoom-in"
-                    />
-                </Col>
-            </Row>
-        </section>
+                    {/* Image 2 */}
+                    <Col md="4" className="image-panel">
+                        <img
+                            src={TeamCul2}
+                            alt="Team Member 2"
+                            className="img-fluid"
+                            data-aos="zoom-in"
+                        />
+                    </Col>
+                </Row>
+            </section>
+        </>
+
     );
 };
 

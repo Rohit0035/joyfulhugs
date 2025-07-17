@@ -1,0 +1,57 @@
+.coming-soon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+}
+
+.content-box {
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.blink-text {
+  font-size: 1.8rem;
+  color: #f8d90f !important;
+  animation: blink 1s infinite;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #000;
+}
+
+.notify-btn {
+  background-color: #f8d90f;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.notify-btn:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
+}
+
+/* Blink animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

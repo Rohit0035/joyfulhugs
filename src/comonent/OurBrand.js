@@ -30,7 +30,7 @@ const OurBrand = () => {
                     <Row>
                         <Col md="5">
                             <div data-aos="fade-up">
-                                <h1 className="heading-bold">We are grown up dreamers.</h1>
+                                <h1 className="heading-bold">Our Brands </h1>
                             </div>
                         </Col>
                         <Col md="7">

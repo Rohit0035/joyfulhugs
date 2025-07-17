@@ -6,10 +6,38 @@
         transition: all 0.5s ease;
     }
     .heading-bold {
-        font-size: 38px;
-        line-height: unset;
+        font-size: 32px;
+        line-height: 38px;
+    }
+    p{
+      font-size: 16px;
+    }
+    /* banner slide sectio */
+    .slide-mb-1 {
+      background-color: #F3F4F1;
+    }
+     .slide-mb-2 {
+      background-color: #F1F0ED;
+    }
+     .slide-mb-3 {
+      background-color: #D8D8D0;
+    }
+    .slide-content {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding: 20px;
+    }
+    .slide-content h2 {
+       font-size: 22px;
      }
-   
+
+     /* ph */
+     .pt-st{
+      padding-top: 30px;
+     }
+
     .menu-custom {
        margin-top: 100px;
     }

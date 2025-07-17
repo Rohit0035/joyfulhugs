@@ -10,77 +10,98 @@ import Slider1 from "../assets/images/coms/slider-1.jpg";
 import Slider2 from "../assets/images/coms/slider-2.jpg";
 import Slider3 from "../assets/images/coms/slider-3.jpg";
 import Chand from "../assets/images/coms/chand.png";
+import SliderMobile1 from "../assets/images/coms//mb-sl-1.png";
+import SliderMobile2 from "../assets/images/coms//mb-sl-2.png";
+import SliderMobile3 from "../assets/images/coms//mb-sl-3.png";
 
-
-const banners = [
-    {
-        id: 1,
-        title: (
-            <>
-                A home for radical ideas in <br /> <b> adult learning</b>
-                <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
-            </>
-        ),
-        image: Slider1
-    },
-
-    {
-        id: 2,
-        title: (
-            <>
-                Each brand under our wings dares <br /> to <b> reimaging what it means to<br /> grow up</b>
-                <img src={Chand} alt="Star" className="m2" style={{ width: 80 }} />
-            </>
-        ),
-        image: Slider2
-    },
-    {
-        id: 3,
-        title: (
-            <>
-                We are reimaging adult learning <br /> to <b>  for the dreamers,  doers, and<br /> the rebels</b>
-                <img src={Chand} alt="Star" className="m3" style={{ width: 80 }} />
-            </>
-        ),
-        image: Slider3
-    }
-
-    
-];
 
 const BannerSlider = () => {
     return (
-        <div className="banner-slider">
-            <Swiper
-                modules={[Autoplay, Pagination, EffectFade]}
-                slidesPerView={1}
-                effect="fade"
-                loop={true}
-                // autoplay={{
-                //     delay: 4000,
-                //     disableOnInteraction: false
-                // }}
-            // pagination={{
-            //   clickable: true
-            // }}
-            >
-                {banners.map((banner) => (
-                    <SwiperSlide key={banner.id}>
-                        <div className="slide">
-                            <img
-                                src={banner.image}
-                                alt={banner.title}
-                                className="slide-image"
-                            />
-                            <div className="slide-content">
-                                <h2 className="text-dark fw-300">{banner.title}</h2>
-                                {/* <p>{banner.subtitle}</p> */}
+        <>
+            <section>
+                <div className="banner-slider">
+                    <Swiper
+                        modules={[Autoplay, Pagination, EffectFade]}
+                        slidesPerView={1}
+                        effect="fade"
+                        loop={true}
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false
+                        }}
+                    >
+                        <SwiperSlide>
+                            <div className="slide slide-mb-1">
+                                <div className="slide-content">
+                                    <h2 className="text-dark fw-300">
+                                        A home for radical ideas in <br />
+                                        <b> adult learning</b>
+                                        <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
+                                    </h2>
+                                </div>
+                                <img
+                                    src={Slider1}
+                                    alt="Slide 1"
+                                    className="slide-image d-none d-md-block"
+                                />
+                                <img
+                                    src={SliderMobile1}
+                                    alt="Slide 1"
+                                    className="slide-image d-block d-md-none"
+                                />
+
                             </div>
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="slide slide-mb-2">
+                                <div className="slide-content">
+                                    <h2 className="text-dark fw-300">
+                                        Each brand under our wings dares <br />
+                                        to <b> reimagine what it means to<br /> grow up</b>
+                                        <img src={Chand} alt="Star" className="m2" style={{ width: 80 }} />
+                                    </h2>
+                                </div>
+                                <img
+                                    src={Slider2}
+                                    alt="Slide 1"
+                                    className="slide-image d-none d-md-block"
+                                />
+                                <img
+                                    src={SliderMobile2}
+                                    alt="Slide 1"
+                                    className="slide-image d-block d-md-none"
+                                />
+
+                            </div>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <div className="slide slide-mb-3">
+                                <div className="slide-content">
+                                    <h2 className="text-dark fw-300">
+                                        We are reimagining adult learning <br />
+                                        <b>for the dreamers, doers, and<br /> the rebels</b>
+                                        <img src={Chand} alt="Star" className="m3" style={{ width: 80 }} />
+                                    </h2>
+                                </div>
+                                <img
+                                    src={Slider3}
+                                    alt="Slide 1"
+                                    className="slide-image d-none d-md-block"
+                                />
+                                <img
+                                    src={SliderMobile3}
+                                    alt="Slide 1"
+                                    className="slide-image d-block d-md-none"
+                                />
+
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+            </section>
+        </>
     );
 };
 

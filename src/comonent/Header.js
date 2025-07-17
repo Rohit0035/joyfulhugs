@@ -21,11 +21,11 @@ const Header = () => {
 
     const navLinks = [
         { path: "/", label: "HOME" },
-        { path: "/", label: "BRAND" },
-        { path: "/", label: "TEAM" },
-        { path: "/", label: "PHILOSOPHY " },
-        { path: "/", label: "JOBS  " },
-        { path: "/", label: "CONTACT US" },
+        { path: "/coming-soon", label: "BRAND" },
+        { path: "/team-culture", label: "TEAM" },
+        { path: "/adultgarten-philosophy", label: "PHILOSOPHY " },
+        { path: "/coming-soon", label: "JOBS  " },
+        { path: "/coming-soon", label: "CONTACT US" },
 
     ];
 
