@@ -1,0 +1,43 @@
+.job-sec{
+    padding-bottom: 70px;
+    padding-top: 130px;
+}
+
+img.ch-j {
+    position: absolute;
+    top: -9px;
+    width: 45%;
+    left: 0px;
+}
+.job-sec2{
+    margin-top: 120px;
+}
+
+.int-lbl{
+  font-weight: 300;
+}
+.int-bg{
+  background-color: #D9D9D9 !important;
+}
+.job-head{
+  font-size: 42px ;
+}
+.job-form{
+  background: #edebeb2e;
+  padding: 20px;
+}
+.btn-sub {
+    background: none !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 24px !important;
+    font-weight: 600;
+    position: relative;
+    margin-right: 20px;
+}
+img.sbm-chand {
+    width: 75px;
+    right: -10px;
+    position: absolute;
+    top: 10px;
+}

@@ -34,8 +34,8 @@ const OurBrand = () => {
                             </div>
                         </Col>
                         <Col md="7">
-                            <p className="mb-0 mt-4" data-aos="fade-up">
-                                We build brands that challenge, uplift, and awaken because the world doesn’t change when people know more – it changes when they start living what they believe.
+                            <p className="mb-0 mt-2" data-aos="fade-up">
+                                We believe adulthood is not the end of becoming – it’s the beginning. That’s why we build brands that spark reflection, invite bold action, and meet adults where they are – with respect, imagination and honesty.
                             </p>
                         </Col>
                     </Row>

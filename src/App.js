@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import TeamCulture from './pages/TeamCulture';
 import ComingSoon from './pages/ComingSoon';
 import AdultgartenPhilosophy from './AdultgartenPhilosophy';
+import Job from './pages/Job';
+import ContactUs from './pages/ContactUs';
 
 
 function App() {
@@ -19,6 +21,13 @@ function App() {
         <Route path="/coming-soon" element={<ComingSoon />} />
 
         <Route path="/adultgarten-philosophy" element={<AdultgartenPhilosophy />} />
+
+        <Route path="/job" element={<Job />} />
+
+
+        <Route path="/contactus" element={<ContactUs />} />
+
+
 
 
       </Routes>

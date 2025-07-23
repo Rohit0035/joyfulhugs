@@ -48,21 +48,35 @@
     .logo {
      width: 120px;
     }
+
+    .job-sec {
+     padding-bottom: 0px;
+    }
+    img.ch-j {
+      width: 90%;
+      left: 0px;
+    }
+    .job-head {
+      font-size: 24px;
+    }
   
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .destop-font {
-    font-size: 18px !important;
-    font-weight: 600 !important;
-    margin: 0 6px !important;
+  .destopk-font {
+    font-size: 14px !important;
   }
+   
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  
+  .desktop-font {
+    font-size: 14px !important;
+    padding: 0px !important;
+  }
+ 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -72,9 +86,9 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .destop-font {
-    font-size: 18px !important;
-    font-weight: 600 !important;
+  .desktop-font {
+    font-size: 16px !important;
+    font-weight: 400 !important;
     margin: 0 12px !important;
   }
 }

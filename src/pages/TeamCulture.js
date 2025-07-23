@@ -15,6 +15,7 @@ import img2 from "../assets/images/coms/member-dhara.png";
 import img3 from "../assets/images/coms/member-udit.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TeamMemberCard from "../comonent/TeamMemberCard";
 
 const teamData = [
     {
@@ -47,7 +48,7 @@ const TeamCulture = ({ name }) => {
                 <Container>
                     <Row>
                         <Col md="12" data-aos="zoom-in">
-                            <h1>Team & Culture </h1>
+                            <h1 className="heading-bold">Team & Culture </h1>
                             <p>
                                 This is a place where your voice matters, your ideas spark change, and pushing boundaries is part of the job description.
                             </p>
@@ -80,7 +81,7 @@ const TeamCulture = ({ name }) => {
                 </div>
             </section>
 
-            <section className="pt-70 pb-70">
+            <section className="pt-120 pb-120">
                 <Container>
                     <Row>
                         <Col md="12" data-aos="zoom-in">
@@ -138,7 +139,7 @@ const TeamCulture = ({ name }) => {
                 </Container>
             </section>
 
-            <section className='pb-50'>
+            {/* <section className='pb-50'>
                 <div className="team-slider-section" data-aos="zoom-in">
                     <Swiper
                         modules={[Pagination]}
@@ -164,8 +165,10 @@ const TeamCulture = ({ name }) => {
                         ))}
                     </Swiper>
                 </div>
-            </section>
+            </section> */}
 
+
+            <TeamMemberCard/>
 
             <Footer />
         </>

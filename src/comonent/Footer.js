@@ -2,20 +2,21 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../assets/css/Footer.css';
-import Logo from  "../assets/images/coms/logo.png"
+import Logo from "../assets/images/coms/logo.png"
+import { FaEnvelope } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer-section">
       <Container>
         <Row className="footer-links mb-4 py-5">
           <Col md="2" sm="6" xs="6">
-             <img src={Logo}  alt='juyful'   width='150px'/>
+            <img src={Logo} alt='juyful' width='150px' />
           </Col>
-          <Col md="2" sm="6" xs="6">
+          {/* <Col md="2" sm="6" xs="6">
             <h6>BRANDS</h6>
             <Link to="/brands-coming-soon">Coming Soon</Link>
             <Link to="/brands">Brands</Link>
-          </Col>
+          </Col> */}
           <Col md="2" sm="6" xs="6">
             <h6>TEAM</h6>
             <Link to="/founder">Founder</Link>
@@ -27,16 +28,15 @@ const Footer = () => {
           </Col>
           <Col md="2" sm="6" xs="6">
             <h6>JOBS</h6>
-            <Link to="/jobs">Jobs</Link>
-            <Link to="/careers">Jobs</Link>
+            <Link to="/job">Apply Now</Link>
           </Col>
-          <Col md="2" sm="6" xs="6">
+          <Col md="4" sm="6" xs="6">
             <h6>CONTACT US</h6>
-            <Link to="/contact">Contact Us</Link>
-            <Link to="/support">Contact Us</Link>
+            <Link to="mailto:uditbhattacharya@joyfulhugs.in"> <FaEnvelope className='me-1'  color='#ffe100'/>uditbhattacharya@joyfulhugs.in</Link>
+            <Link to="mailto:mayanksolanki@joyfulhugs.in"><FaEnvelope className='me-1' color='#ffe100' />mayanksolanki@joyfulhugs.in</Link>
           </Col>
         </Row>
-         <hr className='mb-0'/>
+        <hr className='mb-0' />
         <Row className="footer-bottom text-center py-3">
           <Col xs="12" md="4">
             Joyfulhugs pvt Ltd

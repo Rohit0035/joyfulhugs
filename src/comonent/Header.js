@@ -24,8 +24,8 @@ const Header = () => {
         { path: "/coming-soon", label: "BRAND" },
         { path: "/team-culture", label: "TEAM" },
         { path: "/adultgarten-philosophy", label: "PHILOSOPHY " },
-        { path: "/coming-soon", label: "JOBS  " },
-        { path: "/coming-soon", label: "CONTACT US" },
+        { path: "/job", label: "JOBS  " },
+        { path: "/contactus", label: "CONTACT US" },
 
     ];
 
