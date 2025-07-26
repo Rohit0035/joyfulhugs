@@ -4,48 +4,21 @@
 }
 
 .contact-section {
-  background: #f8f9fa;
+      background-image: url(../images/coms/contact-bg.png);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
 }
-
-.contact-card {
-  border: none !important;
-  background: #e3e8ed;
-  border-radius: 8px;
+.contact-form{
+  background-color: #F8F9FA;
+  padding: 20px;
 }
-
-.icon-circle {
-  width: 50px;
-  height: 50px;
-  background-color: #ffe102;
-  color: #fff;
-  border-radius: 50%;
-  margin: 0 auto 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.bx-form-sec2{
+  margin-top: -112px;
 }
-
-.contact-card h6 {
-  margin-top: 10px;
-  font-weight: 600;
-}
-
-.contact-card p {
-  margin: 0;
-}
-
-img.img-fluid {
-  max-height: 100%;
-  object-fit: cover;
+.st-cus-space1{
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 
-.btn-sub {
-    background: none !important;
-    border: none !important;
-    color: #000 !important;
-    font-size: 24px !important;
-    font-weight: 600;
-    position: relative;
-    margin-right: 20px;
-}

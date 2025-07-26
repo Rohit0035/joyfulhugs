@@ -13,6 +13,7 @@ import Chand from "../assets/images/coms/chand.png";
 import SliderMobile1 from "../assets/images/coms//mb-sl-1.png";
 import SliderMobile2 from "../assets/images/coms//mb-sl-2.png";
 import SliderMobile3 from "../assets/images/coms//mb-sl-3.png";
+import { Container } from "reactstrap";
 
 
 const BannerSlider = () => {
@@ -25,19 +26,22 @@ const BannerSlider = () => {
                         slidesPerView={1}
                         effect="fade"
                         loop={true}
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false
-                        }}
+                        // autoplay={{
+                        //     delay: 4000,
+                        //     disableOnInteraction: false
+                        // }}
                     >
                         <SwiperSlide>
                             <div className="slide slide-mb-1">
                                 <div className="slide-content">
-                                    <h2 className="text-dark fw-300">
-                                        A home for radical ideas in <br />
-                                        <b> adult learning</b>
-                                        <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
-                                    </h2>
+                                    <Container>
+                                        <h2 className="text-dark fw-300">
+                                            A home for radical ideas in <br />
+                                            <b> adult learning</b>
+                                            <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
+                                        </h2>
+                                    </Container>
+
                                 </div>
                                 <img
                                     src={Slider1}
@@ -49,7 +53,6 @@ const BannerSlider = () => {
                                     alt="Slide 1"
                                     className="slide-image d-block d-md-none"
                                 />
-
                             </div>
                         </SwiperSlide>
 

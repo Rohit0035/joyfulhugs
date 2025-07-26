@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Chand from '../assets/images/coms/chand.png'
 
 const JoyfulLoader = () => {
   const [key, setKey] = useState(0);

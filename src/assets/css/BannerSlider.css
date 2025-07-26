@@ -1,6 +1,7 @@
 .banner-slider {
   position: relative;
   overflow: hidden;
+
 }
 
 .slide {
@@ -16,7 +17,7 @@
 .slide-content {
   position: absolute;
   top: 15%;
-  left: 7%;
+  left: 10%;
   transform: translateY(-50%);
   font-weight:300 !important;
   /* color: white; */

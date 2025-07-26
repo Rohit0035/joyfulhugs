@@ -25,7 +25,7 @@ const LoopHeadingSection = () => {
     }, []);
     return (
         <>
-            <section className="loop-heading-section pt-70 pb-70">
+            <section className="loop-heading-section pt-120 pb-120">
                 <Container>
                     <Row>
                         <Col md="12" className="text-container">

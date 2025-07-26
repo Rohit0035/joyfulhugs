@@ -14,7 +14,7 @@ const TeamCultureSection = () => {
     }, []);
     return (
         <>
-            <section className="pt-70 pb-70">
+            <section className="pt-70 pb-70 d-none d-sm-block">
                 <Container>
                     <Row>
                         <Col md='5'>
@@ -24,14 +24,14 @@ const TeamCultureSection = () => {
                             </h1>
                         </Col>
                         <Col md='7'>
-                            <p className="mt-0  mb-0">
+                            <p className="mt-2  mb-0">
                                 We build brands that challenge, uplift, and awaken because the world doesn’t change when people know more – it change when they start living what they believe.
                             </p>
                         </Col>
                     </Row>
                 </Container>
             </section>
-            <section className="team-culture-section ">
+            <section className="team-culture-section d-none d-sm-block ">
                 <Row className="g-0 align-items-stretch h-100 team-culture-row">
                     {/* Left Text Column */}
                     <Col md="4" className="left-panel">
@@ -40,13 +40,22 @@ const TeamCultureSection = () => {
                             <h1 className="mb-3 heading-bold">Culture</h1>
                             <img src={Chand} alt='juyful' className='mt-moon' />
                         </div>
-                        <div className="know-us-link pe-5">
-                            <Link to="/about" className="know-us text-decoration-none fs-5">know us</Link>
+                        <div className="know-us-link pe-2 pb-4">
+                            <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black">know us
+                                <span style={{
+                                    position: 'relative',
+                                    right: '40px'
+                                }}>
+                                    <img src={Chand} alt='joyful' width={70}
+                                    />
+                                </span>
+                            </Link>
                         </div>
+
                     </Col>
 
                     {/* Image 1 */}
-                    <Col md="4" className="image-panel d-md-block px-md-1 mb-1">
+                    <Col md="4" className="image-panel d-md-block px-md-1  mb-1 mb-md-0">
                         <img
                             src={TeamCul1}
                             alt="Team Member 1"

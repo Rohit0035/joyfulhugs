@@ -11,6 +11,12 @@
   color: #333;
 }
 
+.img-mobile{
+   background-image: url('../images/coms/teams-mobile-img.png') !important; /* Replace with your image */
+   padding: 0px !important;
+   height: 220px !important;
+
+}
 .overlay-text {
   position: absolute;
   top: 13%;
@@ -28,10 +34,10 @@
   color: #555;
 } */
 
-.bottom-right {
+.bottom-right-str {
   position: absolute;
-  bottom: 20px;
-  right: 120px;
+  bottom: 100px;
+  right: 80px;
   display: flex;
   align-items: center;
   gap: 8px;

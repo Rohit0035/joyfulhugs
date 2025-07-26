@@ -64,7 +64,7 @@ const ContactUsSection = () => {
                                 <Label for="message">Message</Label>
                                 <Input type="textarea" id="message" rows="2" placeholder="Your message..." />
                             </FormGroup>
-                            <Link className="mt-2 fs-5 text-decoration-none text-black">join us
+                            <Link className="mt-2 fs-5 text-decoration-none text-black">send us
                                 <span style={{
                                     position: 'relative',
                                     right: '40px'

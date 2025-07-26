@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Container, Row, Col, Card, CardBody, Button, Form, FormGroup, Input, Label
 } from 'reactstrap';
-import { FaPhoneAlt, FaComments, FaEnvelope, FaSearchLocation } from 'react-icons/fa';
 import '../assets/css/ContactUs.css';
 import Header from '../comonent/Header';
 import Footer from '../comonent/Footer';
-import contactimg from "../assets/images/coms/contact-sec.jpg"
 import Chand2 from '../assets/images/coms/chand.png'
 import { Link } from 'react-router-dom';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactUs = () => {
+
+       useEffect(() => {
+            AOS.init({ duration: 1000, once: false });
+        }, []);
     return (
         <>
 
@@ -21,8 +24,8 @@ const ContactUs = () => {
                 <Container>
                     <Row>
                         <Col md="12">
-                            <h1 className='heading-bold'>
-                                Contact Us
+                            <h1 className='heading-bold' data-aos="fade-right">
+                                If you’re quietly working on yourself we’d love to hear from you.
                             </h1>
                         </Col>
                     </Row>
@@ -30,69 +33,65 @@ const ContactUs = () => {
 
             </section>
 
-            <section className="contact-section py-5">
+            <section className="contact-section">
                 <Container>
-                    {/* Top Cards */}
-                    <Row className="mb-5 text-center">
-                        <Col md="4" className='mb-2'>
-                            <Card className="contact-card h-100 border-none">
-                                <CardBody>
-                                    <div className="icon-circle"><FaPhoneAlt size={24} /></div>
-                                    <h6>Call Us</h6>
-                                    <a href="tel:123123123" className="text-primary d-block mt-2 text-decoration-none text-dark">1-123123123</a>
-                                </CardBody>
-                            </Card>
+                    <Row className='st-cus-space1'>
+                        <Col md="4" className='mb-3'>
+                            <p className='mb-0' data-aos="zoom-in">
+                                <Link className='text-black text-decoration-none'>
+                                    mayanksolanki@joyfulhugs.in
+                                </Link>
+                            </p>
+                            <p className='mb-0' data-aos="zoom-in">
+                                <Link className='text-black text-decoration-none'>
+                                    uditbhattacharya@joyfulhugs.in
+                                </Link>
+                            </p>
                         </Col>
-                        <Col md="4" className='mb-2'>
-                            <Card className="contact-card h-100 border-none">
-                                <CardBody>
-                                    <div className="icon-circle"><FaSearchLocation size={24} /></div>
-                                    <h6>Address</h6>
-                                    <p className="small mb-2">Lorem Lorem</p>
-                                </CardBody>
-                            </Card>
+                        <Col md="4">
                         </Col>
-                        <Col md="4" className='mb-2'>
-                            <Card className="contact-card h-100 border-none">
-                                <CardBody>
-                                    <div className="icon-circle"><FaEnvelope size={24} /></div>
-                                    <h6>Ask a Question</h6>
-                                    <Link to="mailto:uditbhattacharya@joyfulhugs.in" className='text-decoration-none text-black'> <FaEnvelope className='me-1' color='#ffe100' />uditbhattacharya@joyfulhugs.in</Link>
-                                    <br/>
-                                    <Link to="mailto:mayanksolanki@joyfulhugs.in" className='text-decoration-none text-black'><FaEnvelope className='me-1 ' color='#ffe100' />mayanksolanki@joyfulhugs.in</Link>
-                                </CardBody>
-                            </Card>
+                        <Col md="4" className='mb-3' data-aos="zoom-in">
+                            <p>
+                                Dev X Binori B square 4th floor Sindhu<br /> Bhavan Road Ahmedabad 380059
+                            </p>
                         </Col>
                     </Row>
+                </Container>
+            </section>
 
-                    {/* Bottom Two-Column */}
-                    <Row className="align-items-center">
-                        <Col md="6" className='mb-3'>
-                            <img
-                                src={contactimg} // Replace with your actual image path
-                                alt="Contact"
-                                className="img-fluid rounded shadow"
-                            />
-                        </Col>
-                        <Col md="6">
+            <section className='bx-form-sec2'>
+                <Container>
+                    <Row>
+                        <Col md="12">
                             <Form>
-                                <FormGroup>
-                                    <Label for="name">Your Name</Label>
-                                    <Input type="text" id="name" />
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label for="email">Email</Label>
-                                    <Input type="email" id="email" />
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label for="message">Message</Label>
-                                    <Input type="textarea" id="message" rows="4" />
-                                </FormGroup>
-                                <Button className='btn-sub'>
-                                    submit
-                                    <img src={Chand2} alt='joyful' className='sbm-chand' />
-                                </Button>
+                                <div className='contact-form'>
+                                    <Row>
+                                        <Col md="12" className='mb-3'>
+                                           <Label>Your Name</Label>
+                                           <Input type="text" />
+                                        </Col>
+                                       <Col md="12" className='mb-3'>
+                                           <Label>Email</Label>
+                                           <Input type="email" />
+                                        </Col>
+                                       <Col md="12" className='mb-3'>
+                                           <Label>Message</Label>
+                                           <Input type="textarea"  style={{height:'150px'}} />
+                                        </Col>
+                                    </Row>
+                                </div>
                             </Form>
+                            <Col md="12">
+                               <div className='text-end mt-4'>
+                                <Button className='btn-sub'>
+                                        submit
+                                          <img src={Chand2} alt='joyful' className='sbm-chand' />
+                                        {/* <span>
+                                            <img src={Chand2} alt='joyful' className='sbm-chand' />
+                                        </span> */}
+                                    </Button>
+                               </div>
+                            </Col>
                         </Col>
                     </Row>
                 </Container>

@@ -59,7 +59,36 @@
     .job-head {
       font-size: 24px;
     }
-  
+    /* contact page */
+    .st-cus-space1{
+      padding-top: 20px;
+      padding-bottom:0px;
+    }
+   .banner-slider {
+      height: 440px ;
+    }
+    .bottom-right-str {
+      right: 0px;
+      bottom: 20px;
+    }
+    .overlayteam {
+      height: 60%;
+    }
+    .heading-bold3{
+     font-size: 48px;
+    }
+    img.arc-st {
+    position: absolute;
+    right: 30px;
+    bottom: -14px;
+    width: 70px;
+   }
+   a.fs-5 {
+    font-size: 18px !important;
+   }
+  .spc-mb {
+    padding: 40px 0px !important;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -92,3 +121,37 @@
     margin: 0 12px !important;
   }
 }
+
+
+@media only screen 
+  and (min-width: 1920px) 
+  and (min-height: 1080px) {
+  .slide-content {
+    left: 16%;
+  }
+  .left-panel{
+    padding-left: 190px !important;
+  }
+  .join-team-section {
+    height: 100vh;
+    background-position: unset;
+    padding: unset;
+  }
+  .overlay-text {
+    position: absolute;
+    left: 16%;
+  }
+  .overlaytxt {
+    position: absolute;
+    top: 314px;
+    right: 509px;
+  }
+  .overlaytxt2 {
+    position: absolute;
+    top: 340px;
+    right: 460px;
+  }
+  .team-member {
+    height: 700px;
+  }
+} 

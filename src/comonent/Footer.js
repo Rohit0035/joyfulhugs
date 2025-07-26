@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer-section">
       <Container>
         <Row className="footer-links mb-4 py-5">
-          <Col md="2" sm="6" xs="6">
+          <Col md="2" sm="12" xs="12" className='mb-3'>
             <img src={Logo} alt='juyful' width='150px' />
           </Col>
           {/* <Col md="2" sm="6" xs="6">
@@ -17,23 +17,23 @@ const Footer = () => {
             <Link to="/brands-coming-soon">Coming Soon</Link>
             <Link to="/brands">Brands</Link>
           </Col> */}
-          <Col md="2" sm="6" xs="6">
+          <Col md="2" sm="6" xs="6" className='mb-3'>
             <h6>TEAM</h6>
             <Link to="/founder">Founder</Link>
             <Link to="/join-us">Join Us</Link>
           </Col>
-          <Col md="2" sm="6" xs="6">
+          <Col md="2" sm="6" xs="6" className='mb-3' >
             <h6>PHILOSOPHY</h6>
             <Link to="/adultkarten">Adultkarten</Link>
           </Col>
-          <Col md="2" sm="6" xs="6">
+          <Col md="2" sm="6" xs="6" className='mb-3'>
             <h6>JOBS</h6>
             <Link to="/job">Apply Now</Link>
           </Col>
-          <Col md="4" sm="6" xs="6">
+          <Col md="4" sm="12" xs="12" className='mb-3'>
             <h6>CONTACT US</h6>
-            <Link to="mailto:uditbhattacharya@joyfulhugs.in"> <FaEnvelope className='me-1'  color='#ffe100'/>uditbhattacharya@joyfulhugs.in</Link>
-            <Link to="mailto:mayanksolanki@joyfulhugs.in"><FaEnvelope className='me-1' color='#ffe100' />mayanksolanki@joyfulhugs.in</Link>
+            <Link to="mailto:uditbhattacharya@joyfulhugs.in"> uditbhattacharya@joyfulhugs.in</Link>
+            <Link to="mailto:mayanksolanki@joyfulhugs.in"> mayanksolanki@joyfulhugs.in</Link>
           </Col>
         </Row>
         <hr className='mb-0' />

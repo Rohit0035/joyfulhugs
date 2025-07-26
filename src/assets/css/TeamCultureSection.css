@@ -60,3 +60,17 @@ img.mt-moon {
     right: 212px;
 }
 
+.sec-mobile{
+  text-align: center;
+  background-color: #DCDCD6;
+  p{
+    margin-top: 60px;
+  }
+}
+
+img.joinch {
+    position: absolute;
+    width: 200px;
+    top: -8%;
+    right: 5%;
+}

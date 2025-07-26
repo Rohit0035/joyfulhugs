@@ -21,7 +21,7 @@ const Header = () => {
 
     const navLinks = [
         { path: "/", label: "HOME" },
-        { path: "/coming-soon", label: "BRAND" },
+        { path: "javascript:void(0)", label: "BRAND", disabled: true },
         { path: "/team-culture", label: "TEAM" },
         { path: "/adultgarten-philosophy", label: "PHILOSOPHY " },
         { path: "/job", label: "JOBS  " },

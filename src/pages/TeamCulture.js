@@ -13,6 +13,8 @@ import chand from "../assets/images/coms/chand.png"
 import img1 from "../assets/images/coms/member-myk.jpg";
 import img2 from "../assets/images/coms/member-dhara.png";
 import img3 from "../assets/images/coms/member-udit.jpg";
+import teammobileimg from "../assets/images/coms/teams-mobile-img.png";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TeamMemberCard from "../comonent/TeamMemberCard";
@@ -66,7 +68,7 @@ const TeamCulture = ({ name }) => {
                         alt="Team Working"
                         className="img-fluid w-100"
                     />
-                    <div className="overlaytxt">
+                    <div className="overlaytxt d-none d-sm-block ">
                         <h4 className='mb-0 text-black'>Speak freely.<br />Build boldly
                             <span>
                                 <img src={chand} alt="joyful" width={80} className='arc-img'
@@ -81,7 +83,7 @@ const TeamCulture = ({ name }) => {
                 </div>
             </section>
 
-            <section className="pt-120 pb-120">
+            <section className="pt-120 pb-120 spc-mb">
                 <Container>
                     <Row>
                         <Col md="12" data-aos="zoom-in">
@@ -94,7 +96,7 @@ const TeamCulture = ({ name }) => {
             </section>
 
 
-            <section className="">
+            <section className="d-none d-sm-block">
                 <div className='position-relative' data-aos="zoom-in">
                     <img
                         src={Teambanner2}
@@ -118,12 +120,12 @@ const TeamCulture = ({ name }) => {
             </section>
 
 
-            <section className='pt-70 pb-70' data-aos="zoom-in">
+            <section className='pt-70 pb-70 spc-mb' data-aos="zoom-in">
                 <Container>
                     <Row>
                         <Col md="4">
                             <div className='mb-2'>
-                                <h1 className='heading-bold text-center'>
+                                <h1 className='heading-bold text-start text-sm-center"'>
                                     People
                                 </h1>
                             </div>
@@ -168,7 +170,34 @@ const TeamCulture = ({ name }) => {
             </section> */}
 
 
-            <TeamMemberCard/>
+            <TeamMemberCard />
+
+
+            <section className="sec-mobile d-block d-sm-none mt-50 pt-5">
+                <Container>
+                    <Row>
+                        <Col md="12" className="position-relative">
+                            <h1 className="heading-bold3">
+                                JOIN US
+                                <spana>
+                                    <img src={chand} alt="joyful"   className="joinch"/>
+                                </spana>
+                            </h1>
+                            <p className="text-start">
+                                A culture for challengers, Creators, and those who can’t help but ask <b>“Why not?”</b>
+                            </p>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+
+            <section style={{marginTop:'-10px'}}>
+                 <div className="">
+                    <img src={teammobileimg} alt="" width="100%" />
+                </div>
+            </section>
+
 
             <Footer />
         </>
