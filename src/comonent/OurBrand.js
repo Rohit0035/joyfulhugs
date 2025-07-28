@@ -7,6 +7,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import BrandImg from "../assets/images/coms/barnd-1.png"
 import Comsoon from "../assets/images/coms/comesoon.png"
+import ComeSoon from "./ComeSoon";
 
 const brandData = [
     { id: 1, name: "Brand One", logo: BrandImg },
@@ -73,9 +74,10 @@ const OurBrand = () => {
                     </Row> */}
                 </Container>
             </section>
-            <section>
+            {/* <section>
                <img src={Comsoon}  alt="joyful" className="w-100" />
-            </section>
+            </section> */}
+            <ComeSoon/>
         </>
     );
 };

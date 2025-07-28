@@ -43,7 +43,7 @@
     }
     .heading-bold2 {
        font-weight: regular;
-       font-size: 42px;
+       font-size: 38px;
     }
     .logo {
      width: 120px;
@@ -64,7 +64,7 @@
       padding-top: 20px;
       padding-bottom:0px;
     }
-   .banner-slider {
+    .banner-slider {
       height: 440px ;
     }
     .bottom-right-str {
@@ -88,6 +88,12 @@
    }
   .spc-mb {
     padding: 40px 0px !important;
+  }
+  img.soonarc {
+    width: 100px;
+    position: absolute;
+    right: 24px;
+    top: 7px;
   }
 }
 
@@ -153,5 +159,14 @@
   }
   .team-member {
     height: 700px;
+  }
+  .bottom-right-str{
+    right:275px;
+  }
+  img.soonarc {
+    width: 120px;
+    position: absolute;
+    right: -14px;
+    top: 10px;
   }
 } 

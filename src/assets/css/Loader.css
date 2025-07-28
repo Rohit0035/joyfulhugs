@@ -1,51 +1,106 @@
-/* Loader.css */
-.loader-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000; /* Black background */
-  }
-  
-  .zebra {
-    width: 50px;
-    height: 50px;
-    background: url('../images/common/zebra.jpg') no-repeat center/contain;
-    animation: zebraRun 1s infinite linear;
-  }
-  
-  @keyframes zebraRun {
-    0% {
-      transform: translateX(0);
+.mainload {
+      margin: 0;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
-    100% {
-      transform: translateX(100px); /* Adjust the distance to suit */
+
+    .loader {
+      position: relative;
+      font-size: 60px;
+      /* font-family: Arial, sans-serif; */
+      color: #000;
+      display: flex;
+      gap: 10px;
+      width: 350px;
+      
     }
-  }
-  
-  .progress-bar {
-    position: relative;
-    width: 60%;
-    height: 5px;
-    background-color: #333; /* Dark gray bar */
-    margin-top: 20px;
-    overflow: hidden;
-  }
-  
-  .progress {
-    width: 0;
-    height: 100%;
-    background-color: white; /* White progress */
-    animation: progressMove 3s infinite;
-  }
-  
-  @keyframes progressMove {
-    0% {
-      width: 0;
+
+    .letter {
+      opacity: 0;
+      transform: translateY(-100px);
+      animation: drop 0.6s forwards;
     }
-    100% {
+
+    .letter:nth-child(1) { animation-delay: 0.1s; }
+    .letter:nth-child(2) { animation-delay: 0.3s; }
+    .letter:nth-child(3) { animation-delay: 0.5s; }
+    .letter:nth-child(4) { animation-delay: 0.7s; }
+    .letter:nth-child(5) { animation-delay: 0.9s; }
+    .letter:nth-child(6) { animation-delay: 1.1s; }
+
+    @keyframes drop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .arc-container {
+      position: absolute;
+      bottom: -94px;
+      right: -30px;
+      width: 240px;
+      height: 120px;
+      pointer-events: none;
+      rotate: 150deg;
+    }
+
+    svg {
       width: 100%;
+      height: 100%;
     }
-  }
-  
+
+    .paths {
+      fill: none;
+      stroke: yellow;
+      stroke-width: 12;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      animation: drawArc 1.2s ease-out forwards;
+      animation-delay: 1.8s;
+    }
+
+    @keyframes drawArc {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .hug-text {
+      position: absolute;
+      top: 61px;
+      left: 230px;
+      font-size: 32px;
+      color: yellow;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: riseIn 0.8s ease-out forwards;
+      animation-delay: 2.2s;
+    }
+
+    .company-text {
+     position: absolute;
+    bottom: -98px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    font-size: 22px;
+    color: #000;
+    opacity: 0;
+    animation: riseIn 0.8s ease-out forwards;
+    animation-delay: 3s;
+    letter-spacing: 1px;
+    width: 100%;
+    }
+
+    @keyframes riseIn {
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }

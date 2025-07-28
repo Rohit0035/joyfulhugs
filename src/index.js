@@ -7,6 +7,7 @@ import './assets/css/Style.css';
 import './assets/css/responsive.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import JoyfulLoader from './comonent/JoyfulLoader';
+import Loader from './comonent/Loader';
 
 const Root = () => {
   const [loading, setLoading] = useState(true);
@@ -14,11 +15,11 @@ const Root = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    },4000);
     return () => clearTimeout(timer);
   }, []);
 
-  return loading ? <JoyfulLoader /> : (
+  return loading ? <JoyfulLoader/> : (
     <BrowserRouter>
       <App />
     </BrowserRouter>
