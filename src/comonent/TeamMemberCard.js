@@ -49,10 +49,15 @@ const TeamMemberCard = () => {
                                         <div className="image-container">
                                             <img src={member.image} alt={member.name} className="team-image" />
                                             <div className="overlayteam">
-                                                <div className="overlay-content">
-                                                    <h4 className="team-name text-white mt-3">{member.name}</h4>
-                                                    <h6 className="team-designation">{member.role}</h6>
-                                                    <p className='' style={{ fontSize: '14px', textAlign: 'justify' }}>
+                                                <div className="overlay-content d-flex flex-column justify-content-between h-100  p-3">
+                                                    <div>
+                                                        <h4 className="team-name mb-1">{member.name}</h4>
+                                                        <h4 className="team-designation mb-0">{member.role}</h4>
+                                                    </div>
+                                                    {/* Spacer */}
+                                                    <div className="flex-grow-1"></div>
+                                                    {/* Bottom: Description */}
+                                                    <p style={{ fontSize: '14px', textAlign: 'justify' }} className="mb-0">
                                                         {member.description}
                                                     </p>
                                                 </div>
@@ -73,10 +78,15 @@ const TeamMemberCard = () => {
                                         <div className="image-container">
                                             <img src={member.image} alt={member.name} className="team-image" />
                                             <div className="overlayteam">
-                                                <div className="overlay-content">
-                                                    <h4 className="team-name text-white mt-3">{member.name}</h4>
-                                                    <h6 className="team-designation">{member.role}</h6>
-                                                    <p className='' style={{ fontSize: '14px', textAlign: 'justify' }}>
+                                                <div className="overlay-content d-flex flex-column justify-content-between h-100">
+                                                    <div>
+                                                        <h4 className="team-name mb-1">{member.name}</h4>
+                                                        <h4 className="team-designation mb-0 fw-300">{member.role}</h4>
+                                                    </div>
+                                                    {/* Spacer */}
+                                                    <div className="flex-grow-1"></div>
+                                                    {/* Bottom: Description */}
+                                                    <p style={{ fontSize: '14px', textAlign: 'justify' }} className="mb-0">
                                                         {member.description}
                                                     </p>
                                                 </div>

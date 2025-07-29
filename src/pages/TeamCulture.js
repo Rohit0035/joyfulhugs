@@ -189,16 +189,10 @@ const TeamCulture = ({ name }) => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
-
-
-            <section style={{marginTop:'-10px'}}>
-                 <div className="">
+                <div className="">
                     <img src={teammobileimg} alt="" width="100%" />
                 </div>
             </section>
-
-
             <Footer />
         </>
     );

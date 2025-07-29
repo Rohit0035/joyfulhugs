@@ -3,7 +3,7 @@ import Header from './comonent/Header';
 import Footer from './comonent/Footer';
 import { Col, Container, Row } from 'reactstrap';
 import SquareImg from "./assets/images/coms/square.png"
-import BannerImgGirl from "./assets/images/coms/twogirl-img.png"
+import BannerImgGirl from "./assets/images/coms/phlo-bge-n.jpg"
 import Chand from "./assets/images/coms/chand.png"
 import "./assets/css/Philosophy.css"
 import AOS from "aos";
@@ -50,7 +50,7 @@ const AdultgartenPhilosophy = () => {
 
             </section>
 
-            <section className='pt-70' style={{ backgroundColor: '#F1F2EF' }}>
+            <section className='pt-70' style={{ backgroundColor: '#edeee9' }}>
                 <Container>
                     <Row>
                         <Col md="5">
@@ -61,7 +61,7 @@ const AdultgartenPhilosophy = () => {
                             </div>
                         </Col>
                         <Col md="7">
-                            <div className='text-start' data-aos="zoom-in">
+                            <div className='text-start mb-70' data-aos="zoom-in">
                                 <p className='mt-3 mb-4'>
                                     We believe adults seek more than answers — they seek meaning.
                                 </p>

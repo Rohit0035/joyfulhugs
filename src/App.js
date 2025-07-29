@@ -6,6 +6,7 @@ import ComingSoon from './pages/ComingSoon';
 import AdultgartenPhilosophy from './AdultgartenPhilosophy';
 import Job from './pages/Job';
 import ContactUs from './pages/ContactUs';
+import Loader from './comonent/Loader';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
 
 
         <Route path="/contactus" element={<ContactUs />} />
+
+        <Route path="/loader" element={<Loader />} />
+
 
 
 

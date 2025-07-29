@@ -19,7 +19,7 @@ const Root = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  return loading ? <JoyfulLoader/> : (
+  return loading ? <Loader/> : (
     <BrowserRouter>
       <App />
     </BrowserRouter>

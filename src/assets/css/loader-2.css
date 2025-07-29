@@ -1,6 +1,6 @@
 .mainload {
       margin: 0;
-      height: 90vh;
+      height: 100vh;
       background: #fff;
       display: flex;
       align-items: center;
@@ -8,14 +8,15 @@
       overflow: hidden;
     }
 
-  .loader {
+   .loader {
+    font-weight: bolder;
     position: relative;
     font-size: 60px;
+    /* font-family: Arial, sans-serif; */
     color: #000;
     display: flex;
-    gap: 2px;
+    gap: 5px;
     width: 350px;
-    font-weight: bolder;
     font-style: italic;
 }
 
@@ -39,15 +40,15 @@
       }
     }
 
-   .arc-container {
-    position: absolute;
-    bottom: -91px;
-    right: 0px;
-    width: 240px;
-    height: 120px;
-    pointer-events: none;
-    rotate: 150deg;
-}
+    .arc-container {
+      position: absolute;
+      bottom: -94px;
+      right: -30px;
+      width: 240px;
+      height: 120px;
+      pointer-events: none;
+      rotate: 150deg;
+    }
 
     svg {
       width: 100%;
@@ -56,7 +57,7 @@
 
     .paths {
       fill: none;
-      stroke: #ffe100;
+      stroke: yellow;
       stroke-width: 12;
       stroke-linecap: round;
       stroke-linejoin: round;
@@ -75,15 +76,15 @@
     .hug-text {
       position: absolute;
       top: 61px;
-      left: 210px;
+      left: 230px;
       font-size: 32px;
-      color: #ffe100;
+      color: yellow;
       opacity: 0;
       transform: translateY(-30px);
       animation: riseIn 0.8s ease-out forwards;
       animation-delay: 2.2s;
-      font-style: normal;
       font-weight: 400;
+      font-style: normal;
     }
 
     .company-text {
@@ -91,7 +92,7 @@
     bottom: -98px;
     left: 50%;
     transform: translateX(-50%) translateY(20px);
-    font-size: 20px;
+    font-size: 22px;
     color: #000;
     opacity: 0;
     animation: riseIn 0.8s ease-out forwards;
@@ -108,3 +109,35 @@
         transform: translateX(-50%) translateY(0);
       }
     }
+
+
+
+.arc-image {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    width: 240px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
+.arc-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Delayed fade-in */
+.delayed-fade-in {
+  animation: fadeRise 0.8s ease-out forwards;
+  animation-delay: 1.6s; /* Adjust to match JOYFUL drop end */
+}
+
+@keyframes fadeRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

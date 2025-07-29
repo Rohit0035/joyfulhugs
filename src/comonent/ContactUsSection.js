@@ -45,34 +45,37 @@ const ContactUsSection = () => {
 
                     {/* Right: Contact Form */}
                     <Col md="4">
-                        <Form>
+                        <Form className='shadow-sm  p-3'>
                             <Row>
-                                <Col md="6">
+                                <Col md="6" className='mb-1'>
                                     <FormGroup>
                                         <Label for="name">Name</Label>
                                         <Input type="text" id="name" placeholder="Your name" />
                                     </FormGroup>
                                 </Col>
-                                <Col md="6">
+                                <Col md="6" className='mb-1'>
                                     <FormGroup>
                                         <Label for="email">Email</Label>
                                         <Input type="email" id="email" placeholder="Your email" />
                                     </FormGroup>
                                 </Col>
+                                <Col md="12" className='mb-1'>
+                                    <FormGroup>
+                                        <Label for="message">Message</Label>
+                                        <Input type="textarea" id="message" rows="2" placeholder="Your message..." />
+                                    </FormGroup>
+                                </Col>
+                                <Col md="12" className='mb-1 text-end'>
+                                    <Link className="mt-2 fs-5 text-decoration-none text-black pe-3">send us
+                                        <span style={{
+                                            position: 'relative',
+                                        }}>
+                                            <img src={ChandImg} alt='joyful' className='btm-arc'
+                                            />
+                                        </span>
+                                    </Link>
+                                </Col>
                             </Row>
-                            <FormGroup>
-                                <Label for="message">Message</Label>
-                                <Input type="textarea" id="message" rows="2" placeholder="Your message..." />
-                            </FormGroup>
-                            <Link className="mt-2 fs-5 text-decoration-none text-black">send us
-                                <span style={{
-                                    position: 'relative',
-                                    right: '40px'
-                                }}>
-                                    <img src={ChandImg} alt='joyful' width={70}
-                                    />
-                                </span>
-                            </Link>
                         </Form>
                     </Col>
                 </Row>

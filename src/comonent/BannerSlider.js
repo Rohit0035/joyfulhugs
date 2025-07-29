@@ -26,22 +26,19 @@ const BannerSlider = () => {
                         slidesPerView={1}
                         effect="fade"
                         loop={true}
-                        // autoplay={{
-                        //     delay: 4000,
-                        //     disableOnInteraction: false
-                        // }}
+                        autoplay={{
+                            delay: 4000,
+                            disableOnInteraction: false
+                        }}
                     >
                         <SwiperSlide>
                             <div className="slide slide-mb-1">
                                 <div className="slide-content">
-                                    <Container>
-                                        <h2 className="text-dark fw-300">
-                                            A home for radical ideas in <br />
-                                            <b> adult learning</b>
-                                            <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
-                                        </h2>
-                                    </Container>
-
+                                    <h2 className="text-dark fw-300">
+                                        A home for radical ideas in <br />
+                                        <b> adult learning</b>
+                                        <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
+                                    </h2>
                                 </div>
                                 <img
                                     src={Slider1}
