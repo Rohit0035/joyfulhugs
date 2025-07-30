@@ -25,7 +25,7 @@ const Header = () => {
         { path: "/team-culture", label: "TEAM" },
         { path: "/adultgarten-philosophy", label: "PHILOSOPHY " },
         { path: "/job", label: "JOBS  " },
-        { path: "/contactus", label: "CONTACT US" },
+        { path: "/contact", label: "CONTACT US" },
 
     ];
 

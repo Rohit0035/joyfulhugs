@@ -39,9 +39,9 @@ const BannerSlider = () => {
                             <div className="slide slide-mb-1">
                                 <div className="slide-content">
                                     <h2 className="text-dark fw-300">
-                                        A home for radical ideas in <br />
+                                        A home for radical ideas in
                                         <b> adult learning</b>
-                                        <img src={Chand} alt="Star" className="m1" style={{ width: 80 }} />
+                                        <img src={Chand} alt="Star" className="m1" />
                                     </h2>
                                 </div>
                                 <img
@@ -61,9 +61,9 @@ const BannerSlider = () => {
                             <div className="slide slide-mb-2">
                                 <div className="slide-content">
                                     <h2 className="text-dark fw-300">
-                                        Each brand under our wings dares <br />
-                                        to <b> reimagine what it means to<br /> grow up</b>
-                                        <img src={Chand} alt="Star" className="m2" style={{ width: 80 }} />
+                                        Each brand under our wings dares 
+                                        to <b> reimagine what it means to grow up</b>
+                                        <img src={Chand} alt="Star" className="m2" />
                                     </h2>
                                 </div>
                                 <img
@@ -84,9 +84,9 @@ const BannerSlider = () => {
                             <div className="slide slide-mb-3">
                                 <div className="slide-content">
                                     <h2 className="text-dark fw-300">
-                                        We are reimagining adult learning <br />
-                                        <b>for the dreamers, doers, and<br /> the rebels</b>
-                                        <img src={Chand} alt="Star" className="m3" style={{ width: 80 }} />
+                                        We are reimagining adult learning 
+                                        <b>for the dreamers, doers, and the rebels</b>
+                                        <img src={Chand} alt="Star" className="m3" />
                                     </h2>
                                 </div>
                                 <img

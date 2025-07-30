@@ -125,7 +125,7 @@ const TeamCulture = ({ name }) => {
                     <Row>
                         <Col md="4">
                             <div className='mb-2'>
-                                <h1 className="heading-bold text-start text-sm-center">
+                                <h1 className="heading-bold text-start text-sm-center ft-mobile-peple">
                                     People
                                 </h1>
                             </div>

@@ -108,3 +108,60 @@
         transform: translateX(-50%) translateY(0);
       }
     }
+
+
+   @media only screen and (max-width: 600px) {
+
+  .loader {
+    position: relative;
+    font-size: 48px;
+    color: #000;
+    display: flex;
+    gap: 2px;
+    width: 326px;
+    font-weight: bolder;
+    font-style: italic;
+    justify-content: center;
+}
+.hug-text {
+    position: absolute;
+    top: 46px;
+    left: 225px;
+    font-size: 24px;
+    color: #ffe100;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: riseIn 0.8s ease-out forwards;
+    animation-delay: 2.2s;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.arc-container {
+    position: absolute;
+    bottom: -86px;
+    right: 0px;
+    width: 180px;
+    height: 120px;
+    pointer-events: none;
+    rotate: 150deg;
+}
+
+.company-text {
+    position: absolute;
+    bottom: -76px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    font-size: 14px;
+    color: #000;
+    opacity: 0;
+    animation: riseIn 0.8s ease-out forwards;
+    animation-delay: 3s;
+    letter-spacing: 1px;
+    width: 100%;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+}

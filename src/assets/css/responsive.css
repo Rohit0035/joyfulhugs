@@ -10,7 +10,7 @@
         line-height: 38px;
     }
     p{
-      font-size: 16px;
+      font-size: 14px;
     }
     /* banner slide sectio */
     .slide-mb-1 {
@@ -20,7 +20,7 @@
       background-color: #F1F0ED;
     }
      .slide-mb-3 {
-      background-color: #D8D8D0;
+      background-color: #dcdace;
     }
     .slide-content {
         position: unset;
@@ -57,7 +57,7 @@
       left: 0px;
     }
     .job-head {
-      font-size: 24px;
+      font-size: 15px;
     }
     /* contact page */
     .st-cus-space1{
@@ -74,14 +74,15 @@
     .heading-bold3{
      font-size: 48px;
     }
-    img.arc-st {
-    position: absolute;
-    right: 30px;
-    bottom: -14px;
-    width: 70px;
-   }
+   img.arc-st {
+      position: absolute;
+      right: -9px;
+      bottom: 30px;
+      width: 180px;
+  }  
    a.fs-5 {
     font-size: 18px !important;
+    padding-right: 15px;
    }
   .spc-mb {
     padding: 40px 0px !important;
@@ -92,6 +93,17 @@
     right: 24px;
     top: 7px;
   }
+  .ft-mobile-peple{
+    font-size: 72px;
+    padding-bottom: 30px;
+  }
+  .job-sec2 {
+    margin-top: 20px;
+  } 
+  .mob-spc-bt {
+    padding-bottom: 40px;
+  }   
+ 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -168,5 +180,10 @@
   }
   .slider-height{
      height: 1200px;
+  }
+  img.arc-st {
+    position: absolute;
+    right: 130px;
+    bottom: -35px;
   }
 }  

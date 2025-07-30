@@ -32,16 +32,16 @@ const AdultgartenPhilosophy = () => {
                             <div className='' data-aos="zoom-in">
                                 <img src={SquareImg} alt='joyful' className='w-100' />
                                 <h4 className='mb-0 mt-3'><strong>MAYANK  SOLANKI</strong></h4>
-                                <p className='mt-1 mb-0'>FOUNDER </p>
+                                <h4 className='mt-0 mb-0 fw-light' >FOUNDER </h4>
                             </div>
                         </Col>
                         <Col md="9">
                             <div className='pt-st' data-aos="zoom-in">
-                                <p>
-                                    “At Joyful Hugs, we see every adult as a living manuscript — never final, always unfolding.
+                                <p className="mb-0">
+                                    “At Joyful Hugs, we see every adult as a living manuscript — never final, always unfolding. 
                                 </p>
                                 <p>
-                                    n a world that often prizes certainty and completion, we honour the quiet strength it takes to remain a work in progress. That’s why we formed the Adultgarten Philosophy”
+                                    In a world that often prizes certainty and completion, we honour the quiet strength it takes to remain a work in progress. That’s why we formed the Adultgarten Philosophy”
                                 </p>
                             </div>
                         </Col>
@@ -61,7 +61,7 @@ const AdultgartenPhilosophy = () => {
                             </div>
                         </Col>
                         <Col md="7">
-                            <div className='text-start mb-70' data-aos="zoom-in">
+                            <div className='text-start mb-70 mob-spc-bt' data-aos="zoom-in">
                                 <p className='mt-3 mb-4'>
                                     We believe adults seek more than answers — they seek meaning.
                                 </p>

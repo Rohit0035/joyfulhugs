@@ -8,6 +8,7 @@ import Job from './pages/Job';
 import ContactUs from './pages/ContactUs';
 import ThankJob from './pages/ThankJob';
 import ThankContact from './pages/ThankContact';
+import Loader from './comonent/Loader';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
         <Route path="/adultgarten-philosophy" element={<AdultgartenPhilosophy />} />
 
         <Route path="/job" element={<Job />} />
+
+        <Route path="/loader" element={<Loader />} />
 
 
         <Route path="/contact" element={<ContactUs />} />

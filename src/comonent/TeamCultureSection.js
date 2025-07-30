@@ -14,7 +14,7 @@ const TeamCultureSection = () => {
     }, []);
     return (
         <>
-            <section className="pt-70 pb-70 d-none d-sm-block">
+            <section className="pt-70 pb-70">
                 <Container>
                     <Row>
                         <Col md='5'>

@@ -38,17 +38,20 @@
     position: relative;
     right: 40px;
     top: 10px;
+    width: 50px;
 }
 .m2{
   position: relative;
   right: 40px;
   top: 8px;
+  width: 50px;
 
 }
 .m3{
     top: 10px;
     position: relative;
     right: 40px;
+    width: 50px;
 }
 
 /* desktopview */

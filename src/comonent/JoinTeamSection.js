@@ -30,15 +30,14 @@ const JoinTeamSection = () => {
                     </div>
                 </Container>
             </section>
-            <section className="join-team-section img-mobile mt-5 d-block d-sm-none" data-aos="zoom-in">
+            <section className="join-team-section img-mobile d-block d-sm-none" data-aos="zoom-in">
                 <Container>
                     <div className="bottom-right-str">
-                        <Link className="mt-2 fs-5 text-decoration-none text-black">know us
+                        <Link className="mt-2 fs-5 text-decoration-none text-black pe-4">know us
                             <span style={{
                                 position: 'relative',
-                                right: '40px'
                             }}>
-                                <img src={Chand} alt='joyful' width={62}
+                                <img src={Chand} alt='joyful' className='btm-arc'
                                 />
                             </span>
                         </Link>
