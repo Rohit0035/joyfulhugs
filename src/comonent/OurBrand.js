@@ -5,19 +5,7 @@ import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import BrandImg from "../assets/images/coms/barnd-1.png"
-import Comsoon from "../assets/images/coms/comesoon.png"
 import ComeSoon from "./ComeSoon";
-
-const brandData = [
-    { id: 1, name: "Brand One", logo: BrandImg },
-    { id: 2, name: "Brand Two", logo: BrandImg },
-    { id: 3, name: "Brand Three", logo: BrandImg },
-    { id: 4, name: "Brand Four", logo: BrandImg },
-    { id: 5, name: "Brand Five", logo: BrandImg },
-    { id: 5, name: "Brand Five", logo: BrandImg },
-
-];
 
 const OurBrand = () => {
     useEffect(() => {
@@ -30,12 +18,12 @@ const OurBrand = () => {
                 <Container>
                     <Row>
                         <Col md="5">
-                            <div data-aos="fade-up">
+                            <div data-aos="zoom-in">
                                 <h1 className="heading-bold">Our Brands </h1>
                             </div>
                         </Col>
                         <Col md="7">
-                            <p className="mb-0 mt-2" data-aos="fade-up">
+                            <p className="mb-0 mt-2" data-aos="zoom-in">
                                 We believe adulthood is not the end of becoming – it’s the beginning. That’s why we build brands that spark reflection, invite bold action, and meet adults where they are – with respect, imagination and honesty.
                             </p>
                         </Col>

@@ -14,12 +14,16 @@ import SliderMobile1 from "../assets/images/coms//mb-sl-1.png";
 import SliderMobile2 from "../assets/images/coms//mb-sl-2.png";
 import SliderMobile3 from "../assets/images/coms//mb-sl-3.png";
 import { Container } from "reactstrap";
+import Slider from "./Slider";
 
 
 const BannerSlider = () => {
     return (
         <>
-            <section>
+            <section className="d-none d-sm-block">
+                <Slider />
+            </section>
+            <section className="d-block d-sm-none">
                 <div className="banner-slider">
                     <Swiper
                         modules={[Autoplay, Pagination, EffectFade]}

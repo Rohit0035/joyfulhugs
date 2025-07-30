@@ -48,9 +48,9 @@ form button {
   font-weight: 500;
   border-radius: 4px;
 }
-img.btm-arc {
+.btm-arc {
     position: absolute;
     right: -14px;
-    width: 64px;
+    width: 62px;
     top: 4px;
 }

@@ -24,7 +24,7 @@ const TeamCultureSection = () => {
                             </h1>
                         </Col>
                         <Col md='7'>
-                            <p className="mt-2  mb-0">
+                            <p className="mt-3  mb-0">
                                 We build brands that challenge, uplift, and awaken because the world doesn’t change when people know more – it change when they start living what they believe.
                             </p>
                         </Col>
@@ -36,17 +36,16 @@ const TeamCultureSection = () => {
                     {/* Left Text Column */}
                     <Col md="4" className="left-panel">
                         <div className="text-content text-center" data-aos="zoom-in">
-                            <h1 className="mb-1 heading-bold ">Team &</h1>
-                            <h1 className="mb-3 heading-bold">Culture</h1>
+                            <h1 className="mb-1 heading-bold" style={{fontWeight:'300'}}>Team &</h1>
+                            <h1 className="mb-3 heading-bold" style={{fontWeight:'300'}}>Culture</h1>
                             <img src={Chand} alt='juyful' className='mt-moon' />
                         </div>
                         <div className="know-us-link pe-2 pb-4">
-                            <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black">know us
+                            <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black me-4">know us
                                 <span style={{
                                     position: 'relative',
-                                    right: '40px'
                                 }}>
-                                    <img src={Chand} alt='joyful' width={70}
+                                    <img src={Chand} alt='joyful' className="btm-arc"
                                     />
                                 </span>
                             </Link>

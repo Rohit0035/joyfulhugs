@@ -41,7 +41,7 @@ a.fs-5 {
 /* common class css start */
 
 .heading-bold {
-  font-size: 55px;
+  font-size: 64px;
   font-weight: normal;
 }
 .pt-50{
@@ -199,10 +199,10 @@ textarea{
   border: 1px solid white; /* Optional: style the border */
   padding: 5px;
 }
-
-img.soonarc {
+/* coome soon */
+.soonarc {
     width: 120px;
     position: absolute;
-    right: -40px;
+    right: 25px;
     top: 20px;
 }

@@ -46,7 +46,7 @@ const LoopHeadingSection = () => {
                     </Row>
                 </Container>
             </section>
-            <section data-aos="fade-up">
+            <section>
                 <img src={Newpaper} alt="juyful" className="w-100" />
             </section>
 
@@ -84,9 +84,8 @@ const LoopHeadingSection = () => {
                                 <Link className="mt-2 fs-5 text-decoration-none text-black">know more
                                     <span style={{
                                         position: 'relative',
-                                        right: '40px'
                                     }}>
-                                        <img src={Chand} alt='joyful' width={70}
+                                        <img src={Chand} alt='joyful' className="btm-arc"
                                         />
                                     </span>
                                 </Link>

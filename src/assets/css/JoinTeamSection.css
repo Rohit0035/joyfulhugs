@@ -37,11 +37,13 @@
 .bottom-right-str {
   position: absolute;
   bottom: 100px;
-  right: 80px;
+  right: 132px;
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
+
 
 img.mty {
     width: 100px;

@@ -26,7 +26,7 @@ const Job = ({  }) => {
                                     Respond.
 
                                 </h1>
-                                <span>
+                                <span className="position-relative">
                                     <img src={Chand} alt='joyful' className='ch-j' />
                                 </span>
                             </div>

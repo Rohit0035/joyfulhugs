@@ -10,6 +10,7 @@ import JoinTeamSection from '../comonent/JoinTeamSection';
 import LoopHeadingSection from '../comonent/LoopHeadingSection';
 import Footer from '../comonent/Footer';
 import ContactUsSection from '../comonent/ContactUsSection';
+import Slider from '../comonent/Slider';
 
 const Home = () => {
 

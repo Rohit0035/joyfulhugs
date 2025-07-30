@@ -125,13 +125,13 @@ const TeamCulture = ({ name }) => {
                     <Row>
                         <Col md="4">
                             <div className='mb-2'>
-                                <h1 className='heading-bold text-start text-sm-center"'>
+                                <h1 className="heading-bold text-start text-sm-center">
                                     People
                                 </h1>
                             </div>
                         </Col>
                         <Col md="8">
-                            <div className='mb-2'>
+                            <div className='mb-2 mt-2'>
                                 <p>
                                     We are learners, teachers, Dreamers – bound by the belief that education is humanity greatest tool for building a better future
                                 </p>

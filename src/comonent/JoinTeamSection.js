@@ -11,9 +11,9 @@ const JoinTeamSection = () => {
     }, []);
     return (
         <>
-            <section className="join-team-section mt-5 d-none d-sm-block" data-aos="zoom-in">
+            <section className="join-team-section mt-5 d-none d-sm-block" >
                 <Container>
-                    <div className="overlay-text">
+                    <div className="overlay-text" data-aos="zoom-in">
                         <h1 className='heading-bold mb-0'>Join our team</h1>
                         <p className='fs-5 mt-0'>This is us for now !</p>
                     </div>
@@ -22,9 +22,8 @@ const JoinTeamSection = () => {
                         <Link className="mt-2 fs-5 text-decoration-none text-black">know us
                             <span style={{
                                 position: 'relative',
-                                right: '40px'
                             }}>
-                                <img src={Chand} alt='joyful' width={70}
+                                <img src={Chand} alt='joyful' className='btm-arc'
                                 />
                             </span>
                         </Link>
@@ -39,7 +38,7 @@ const JoinTeamSection = () => {
                                 position: 'relative',
                                 right: '40px'
                             }}>
-                                <img src={Chand} alt='joyful' width={70}
+                                <img src={Chand} alt='joyful' width={62}
                                 />
                             </span>
                         </Link>

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { Container, Row, Col } from 'reactstrap';
 import moon from "../assets/images/coms/chand.png"
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const ComeSoon = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+    }, []);
+
     return (
         <section
             style={{
@@ -16,15 +24,13 @@ const ComeSoon = () => {
         >
             <Container>
                 <Row className="justify-content-center">
-                    <Col md="4"></Col>
-                    <Col md="4">
-                        <h1 className="heading-bold position-relative">Coming Soon
-                            <span>
-                                <img src={moon} alt='joyful' className='soonarc' />
-                            </span>
+                    <Col md="3"></Col>
+                    <Col md="6">
+                        <h1 className="heading-bold position-relative" data-aos="zoom-in">Coming Soon
+                            <img src={moon} alt='joyful' className='soonarc' />
                         </h1>
                     </Col>
-                     <Col md="4"></Col>
+                    <Col md="3"></Col>
                 </Row>
             </Container>
         </section>

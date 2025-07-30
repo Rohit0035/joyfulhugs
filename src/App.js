@@ -6,7 +6,8 @@ import ComingSoon from './pages/ComingSoon';
 import AdultgartenPhilosophy from './AdultgartenPhilosophy';
 import Job from './pages/Job';
 import ContactUs from './pages/ContactUs';
-import Loader from './comonent/Loader';
+import ThankJob from './pages/ThankJob';
+import ThankContact from './pages/ThankContact';
 
 
 function App() {
@@ -26,13 +27,9 @@ function App() {
         <Route path="/job" element={<Job />} />
 
 
-        <Route path="/contactus" element={<ContactUs />} />
-
-        <Route path="/loader" element={<Loader />} />
-
-
-
-
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/thankyou" element={<ThankJob />} />
+        <Route path="/thankyou-contact" element={<ThankContact />} />
 
       </Routes>
     </div>

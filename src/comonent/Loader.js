@@ -19,9 +19,9 @@ const Loader = () => {
             </svg>
           </div>
           {/* HUGS text */}
-          {/* <div className="hug-text">HUGS</div> */}
+          <div className="hug-text">HUGS</div>
           {/* AN ADULTGARTEN COMPANY text */}
-          {/* <div className="company-text">AN ADULTGARTEN COMPANY</div> */}
+          <div className="company-text">AN ADULTGARTEN COMPANY</div>
         </div>
       </div>
     </>
