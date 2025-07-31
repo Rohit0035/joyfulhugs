@@ -83,13 +83,13 @@ const ContactUs = () => {
                             </Form>
                             <Col md="12">
                                <div className='text-end mt-4'>
-                                <Button className='btn-sub'>
+                                <Link to="/thankyou-contact" className='btn-sub text-decoration-none'>
                                         submit
                                           <img src={Chand2} alt='joyful' className='sbm-chand' />
                                         {/* <span>
                                             <img src={Chand2} alt='joyful' className='sbm-chand' />
                                         </span> */}
-                                    </Button>
+                                    </Link>
                                </div>
                             </Col>
                         </Col>

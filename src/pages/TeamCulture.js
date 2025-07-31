@@ -13,7 +13,7 @@ import chand from "../assets/images/coms/chand.png"
 import img1 from "../assets/images/coms/member-myk.jpg";
 import img2 from "../assets/images/coms/member-dhara.png";
 import img3 from "../assets/images/coms/member-udit.jpg";
-import teammobileimg from "../assets/images/coms/teams-mobile-img.jpg";
+import teammobileimg from "../assets/images/coms/joinustaem-mobile.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -189,9 +189,9 @@ const TeamCulture = ({ name }) => {
                         </Col>
                     </Row>
                 </Container>
-                <div className="">
+                {/* <div className="">
                     <img src={teammobileimg} alt="" width="100%" />
-                </div>
+                </div> */}
             </section>
             <Footer />
         </>

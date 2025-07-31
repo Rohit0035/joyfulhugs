@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import '../assets/css/ContactUsSection.css';
+import { Link } from 'react-router-dom';
 import ChandImg from "../assets/images/coms/chand.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import emailjs from 'emailjs-com';
-import '../assets/css/ContactUsSection.css';
+import emailjs from 'emailjs-com'; // Import emailjs
 
 const ContactUsSection = () => {
     const [formData, setFormData] = useState({
@@ -13,12 +15,13 @@ const ContactUsSection = () => {
         message: ''
     });
 
-    const [status, setStatus] = useState(null);
+    const [status, setStatus] = useState(null);  // To show success or failure message
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
     }, []);
 
+    // Handle form input change
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -27,26 +30,37 @@ const ContactUsSection = () => {
         }));
     };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    //     const templateParams = {
-    //         name: formData.name,
-    //         email: formData.email,
-    //         message: formData.message
-    //     };
+        const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message
+        };
 
-    //     emailjs.send('service_wwvospw', 'template_l4igkoh', templateParams, 'pCvCzDycsADCQ9ryA')
-    //         .then((response) => {
-    //             console.log('Email sent successfully:', response);
-    //             setStatus('success');
-    //             setFormData({ name: '', email: '', message: '' }); // Reset form
-    //         })
-    //         .catch((error) => {
-    //             console.log('Failed to send email:', error);
-    //             setStatus('error');
-    //         });
-    // };
+        // Send to first email address
+        emailjs.send('your_service_id', 'your_template_id', templateParams, 'your_user_id')
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                setStatus('success');
+            })
+            .catch((error) => {
+                console.log('Failed to send email:', error);
+                setStatus('error');
+            });
+
+        // Send to second email address manually
+        templateParams.to_email = "uditbhattacharya@joyfulhugs.in";  // Second email
+        emailjs.send('your_service_id', 'your_template_id', templateParams, 'your_user_id')
+            .then((response) => {
+                console.log('Email sent successfully to second address:', response);
+            })
+            .catch((error) => {
+                console.log('Failed to send email to second address:', error);
+            });
+    };
 
     return (
         <section className="contact-us-section py-5">
@@ -54,27 +68,26 @@ const ContactUsSection = () => {
                 <Row>
                     {/* Left: Contact Info */}
                     <Col md="8" className="mb-4 mb-md-0">
-                        <h1 className="heading-bold">Contact Us</h1>
+                        <h1 className="heading-bold">Contact Us </h1>
                         <p className="mt-3 mb-3">
                             Dev X Binori B square 4th floor Sindhu Bhavan Road Ahmedabad 380059
                         </p>
                         <p className="mt-0 mb-0">
-                            <a href="mailto:mayanksolanki@joyfulhugs.in" className='text-black text-decoration-none'>
+                            <Link to="mailto:mayanksolanki@joyfulhugs.in" className='text-black text-decoration-none'>
                                 mayanksolanki@joyfulhugs.in
-                            </a>
+                            </Link>
                         </p>
+
                         <p className="mt-0 mb-0">
-                            <a href="mailto:uditbhattacharya@joyfulhugs.in" className='text-black text-decoration-none'>
+                            <Link to="mailto:uditbhattacharya@joyfulhugs.in" className='text-black text-decoration-none'>
                                 uditbhattacharya@joyfulhugs.in
-                            </a>
+                            </Link>
                         </p>
                     </Col>
 
                     {/* Right: Contact Form */}
                     <Col md="4">
-                        <Form className='shadow-sm p-3' 
-                        // onSubmit={handleSubmit}
-                        >
+                        <Form className='shadow-sm p-3' onSubmit={handleSubmit}>
                             <Row>
                                 <Col md="6" className='mb-1'>
                                     <FormGroup>
@@ -120,7 +133,7 @@ const ContactUsSection = () => {
                                     </FormGroup>
                                 </Col>
                                 <Col md="12" className='mb-1 text-end'>
-                                    <Button type="submit" className="btn-sub text-decoration-none me-0" >
+                                    <Button type="submit" className="mt-2 fs-5 text-black pe-3">
                                         Send us
                                         <span style={{ position: 'relative' }}>
                                             <img src={ChandImg} alt='joyful' className='btm-arc' />

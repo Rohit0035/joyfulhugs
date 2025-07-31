@@ -7,6 +7,7 @@ import Chand from '../assets/images/coms/ch-j.png'
 import Chand2 from '../assets/images/coms/chand.png'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Job = ({  }) => {
 
@@ -113,13 +114,13 @@ const Job = ({  }) => {
                                     <Input type="link" className='int-bg' />
                                 </Col>
                                 <Col md='12' className='mb-5 text-end'>
-                                    <Button className='btn-sub'>
+                                    <Link to="/thankyou" className='btn-sub text-decoration-none' >
                                         submit
                                           <img src={Chand2} alt='joyful' className='sbm-chand' />
                                         {/* <span>
                                             <img src={Chand2} alt='joyful' className='sbm-chand' />
                                         </span> */}
-                                    </Button>
+                                    </Link>
                                 </Col>
                             </Row>
                         </Form>

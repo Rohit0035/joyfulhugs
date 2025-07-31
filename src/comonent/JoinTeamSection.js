@@ -19,7 +19,7 @@ const JoinTeamSection = () => {
                     </div>
 
                     <div className="bottom-right-str">
-                        <Link className="mt-2 fs-5 text-decoration-none text-black">know us
+                        <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black">know us
                             <span style={{
                                 position: 'relative',
                             }}>
@@ -33,7 +33,7 @@ const JoinTeamSection = () => {
             <section className="join-team-section img-mobile d-block d-sm-none" data-aos="zoom-in">
                 <Container>
                     <div className="bottom-right-str">
-                        <Link className="mt-2 fs-5 text-decoration-none text-black pe-4">know us
+                        <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black pe-4">know us
                             <span style={{
                                 position: 'relative',
                             }}>

@@ -19,16 +19,16 @@ const Footer = () => {
           </Col> */}
           <Col md="2" sm="6" xs="6" className='mb-3'>
             <h6>TEAM</h6>
-            <Link to="/founder">Founder</Link>
-            <Link to="/join-us">Join Us</Link>
+            <a href="/team-culture">Founder</a>
+            <a href="/contact">Join Us</a>
           </Col>
           <Col md="2" sm="6" xs="6" className='mb-3' >
             <h6>PHILOSOPHY</h6>
-            <Link to="/adultkarten">Adultkarten</Link>
+            <a href="/adultgarten-philosophy">Adultkarten</a>
           </Col>
           <Col md="2" sm="6" xs="6" className='mb-3'>
             <h6>JOBS</h6>
-            <Link to="/job">Apply Now</Link>
+            <a href="/job">Apply Now</a>
           </Col>
           <Col md="4" sm="12" xs="12" className='mb-3'>
             <h6>CONTACT US</h6>

@@ -61,12 +61,16 @@ img.mt-moon {
 }
 
 .sec-mobile{
-  text-align: center;
-  background-color: #DCDCD6;
+    text-align: center;
+    background-image: url(../images/coms/fl-v.png);
+    background-size: cover;
+    padding: 320px 0px;
+    background-position: center;
   p{
     margin-top: 60px;
   }
 }
+
 
 img.joinch {
     position: absolute;
