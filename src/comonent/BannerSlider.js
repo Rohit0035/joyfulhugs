@@ -12,7 +12,7 @@ import Slider3 from "../assets/images/coms/slider-3.jpg";
 import Chand from "../assets/images/coms/chand.png";
 import SliderMobile1 from "../assets/images/coms//mb-sl-1.png";
 import SliderMobile2 from "../assets/images/coms//mb-sl-2.png";
-import SliderMobile3 from "../assets/images/coms//mb-sl-3.png";
+import SliderMobile3 from "../assets/images/coms//mb-sl-3.jpg";
 import { Container } from "reactstrap";
 import Slider from "./Slider";
 
@@ -41,7 +41,9 @@ const BannerSlider = () => {
                                     <h2 className="text-dark fw-300">
                                         A home for radical ideas in
                                         <b> adult learning</b>
-                                        <img src={Chand} alt="Star" className="m1" />
+                                        <span className="position-relative">
+                                            <img src={Chand} alt="Star" className="m1" />
+                                        </span>
                                     </h2>
                                 </div>
                                 <img
@@ -60,10 +62,12 @@ const BannerSlider = () => {
                         <SwiperSlide>
                             <div className="slide slide-mb-2">
                                 <div className="slide-content">
-                                    <h2 className="text-dark fw-300">
-                                        Each brand under our wings dares 
+                                    <h2 className=" position-relative text-dark fw-300">
+                                        Each brand under our wings dares
                                         to <b> reimagine what it means to grow up</b>
-                                        <img src={Chand} alt="Star" className="m2" />
+                                        <span className="position-relative">
+                                            <img src={Chand} alt="Star" className="m2" />
+                                        </span>
                                     </h2>
                                 </div>
                                 <img
@@ -83,10 +87,12 @@ const BannerSlider = () => {
                         <SwiperSlide>
                             <div className="slide slide-mb-3">
                                 <div className="slide-content">
-                                    <h2 className="text-dark fw-300">
-                                        We are reimagining adult learning 
+                                    <h2 className=" position-relative text-dark fw-300">
+                                        We are reimagining adult learning
                                         <b>for the dreamers, doers, and the rebels</b>
-                                        <img src={Chand} alt="Star" className="m3" />
+                                        <span className="position-relative">
+                                            <img src={Chand} alt="Star" className="m3" />
+                                        </span>
                                     </h2>
                                 </div>
                                 <img

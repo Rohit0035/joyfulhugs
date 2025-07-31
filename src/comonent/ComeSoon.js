@@ -27,7 +27,9 @@ const ComeSoon = () => {
                     <Col md="3"></Col>
                     <Col md="6">
                         <h1 className="heading-bold position-relative" data-aos="zoom-in">Coming Soon
-                            <img src={moon} alt='joyful' className='soonarc' />
+                            <span className="position-relative">
+                                <img src={moon} alt='joyful' className='soonarc' />
+                            </span>
                         </h1>
                     </Col>
                     <Col md="3"></Col>

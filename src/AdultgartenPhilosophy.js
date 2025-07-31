@@ -76,7 +76,7 @@ const AdultgartenPhilosophy = () => {
                                 </p>
                                 <p className='mt-0 mb-4'>
                                     And curiosity? It’s the quiet force that keeps us open to change.
-                                    <span >
+                                    <span className="d-none d-sm-block">
                                         <img src={Chand} alt='joyful' width='150px' className='arc-st' />
                                     </span>
                                 </p>

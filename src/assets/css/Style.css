@@ -201,8 +201,8 @@ textarea{
 }
 /* coome soon */
 .soonarc {
-    width: 120px;
+    width: 130px;
     position: absolute;
-    right: 25px;
+    right: -30px;
     top: 20px;
 }

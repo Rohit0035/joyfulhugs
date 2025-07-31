@@ -35,23 +35,23 @@
 }
 
 .m1{
-    position: relative;
-    right: 40px;
-    top: 10px;
-    width: 50px;
+    position: absolute;
+    top: 0px;
+    width: 70px;
+    left: -40px;
 }
 .m2{
-  position: relative;
-  right: 40px;
-  top: 8px;
-  width: 50px;
+    position: absolute;
+    top: 0px;
+    width: 70px;
+    left: -40px;
 
 }
 .m3{
-    top: 10px;
-    position: relative;
-    right: 40px;
-    width: 50px;
+    position: absolute;
+    top: 0px;
+    width: 70px;
+    left: -40px;
 }
 
 /* desktopview */

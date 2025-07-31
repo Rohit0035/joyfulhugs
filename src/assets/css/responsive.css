@@ -20,7 +20,7 @@
       background-color: #F1F0ED;
     }
      .slide-mb-3 {
-      background-color: #dcdace;
+      background-color: #dcdcd6;
     }
     .slide-content {
         position: unset;
@@ -65,7 +65,7 @@
       padding-bottom:0px;
     }
     .banner-slider {
-      height: 440px ;
+      height: 434px ;
     }
     .bottom-right-str {
       right: 0px;
@@ -88,10 +88,10 @@
     padding: 40px 0px !important;
   }
   img.soonarc {
-    width: 100px;
-    position: absolute;
-    right: 24px;
-    top: 7px;
+      width: 80px;
+      position: absolute;
+      right: -26px;
+      top: 0px;
   }
   .ft-mobile-peple{
     font-size: 72px;
