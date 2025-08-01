@@ -68,7 +68,7 @@ const TeamCulture = ({ name }) => {
                         alt="Team Working"
                         className="img-fluid w-100"
                     />
-                    <div className="overlaytxt d-none d-sm-block ">
+                    <div className="overlaytxt d-none">
                         <h4 className='mb-0 text-black'>Speak freely.<br />Build boldly
                             <span>
                                 <img src={chand} alt="joyful" width={80} className='arc-img'

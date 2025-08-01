@@ -2,18 +2,18 @@ import React, { useEffect } from "react";
 import Header from '../comonent/Header';
 import Footer from '../comonent/Footer';
 import "../assets/css/job.css";
-import { Button, Col, Container, Form, Input, Label, Row } from 'reactstrap';
+import { Button, Col, Container, Form, Input, Label, Row, Card, CardBody } from 'reactstrap';
 import Chand from '../assets/images/coms/ch-j.png'
 import Chand2 from '../assets/images/coms/chand.png'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 
-const Job = ({  }) => {
+const Job = ({ positions, deletePosition }) => {
 
-       useEffect(() => {
-            AOS.init({ duration: 1000, once: false });
-        }, []);
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+    }, []);
     return (
         <>
             <Header />
@@ -37,6 +37,22 @@ const Job = ({  }) => {
             </section>
             <section className='job-sec2'>
                 <Container>
+                    {/* <Row>
+                        <Col md="12">
+                            <h4>Job Positions</h4>
+                            {positions.length === 0 ? (
+                                <p>No positions added yet.</p>
+                            ) : (
+                                positions.map((pos, index) => (
+                                    <Card key={index} className="mb-3">
+                                        <CardBody>
+                                            <strong>Position No:</strong> {pos}
+                                        </CardBody>
+                                    </Card>
+                                ))
+                            )}
+                        </Col>
+                    </Row> */}
                     <Row>
                         <Col md="12">
                             <p className='mt-0 mb-0' data-aos="zoom-in">
@@ -116,7 +132,7 @@ const Job = ({  }) => {
                                 <Col md='12' className='mb-5 text-end'>
                                     <Link to="/thankyou" className='btn-sub text-decoration-none' >
                                         submit
-                                          <img src={Chand2} alt='joyful' className='sbm-chand' />
+                                        <img src={Chand2} alt='joyful' className='sbm-chand' />
                                         {/* <span>
                                             <img src={Chand2} alt='joyful' className='sbm-chand' />
                                         </span> */}

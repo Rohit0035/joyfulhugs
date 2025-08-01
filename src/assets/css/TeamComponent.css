@@ -89,3 +89,8 @@
   background: #555;
   color: #fff;
 }
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #ffe100  !important;
+}

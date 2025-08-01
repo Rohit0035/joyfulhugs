@@ -25,7 +25,7 @@ const LoopHeadingSection = () => {
     }, []);
     return (
         <>
-            <section className="loop-heading-section pt-120 pb-120">
+            <section className="loop-heading-section pt-120 pb-120 spc-mb">
                 <Container>
                     <Row>
                         <Col md="12" className="text-container">
@@ -81,7 +81,7 @@ const LoopHeadingSection = () => {
                         </Col>
                         <Col md="5">
                             <div data-aos="zoom-in" className="d-flex flex-column justify-content-end align-items-end pb-5 mt-2" style={{ height: '100%' }}>
-                                <Link className="mt-2 fs-5 text-decoration-none text-black">know more
+                                <Link to="/adultgarten-philosophy" className="mt-2 fs-5 text-decoration-none text-black">know more
                                     <span style={{
                                         position: 'relative',
                                     }}>

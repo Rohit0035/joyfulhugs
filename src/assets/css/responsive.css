@@ -28,6 +28,7 @@
         left: unset;
         transform: unset;
         padding: 20px;
+        height: 130px;
     }
     .slide-content h2 {
        font-size: 22px;
@@ -64,9 +65,6 @@
       padding-top: 20px;
       padding-bottom:0px;
     }
-    .banner-slider {
-      height: 434px ;
-    }
     .bottom-right-str {
       right: 0px;
       bottom: 20px;
@@ -79,7 +77,7 @@
       right: -9px;
       bottom: 30px;
       width: 180px;
-  }  
+    }  
    a.fs-5 {
     font-size: 18px !important;
     padding-right: 15px;

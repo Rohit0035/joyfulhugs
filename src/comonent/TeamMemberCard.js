@@ -4,7 +4,9 @@ import '../assets/css/TeamComponent.css';
 import Header from '../comonent/Header';
 import Footer from '../comonent/Footer';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
 
 import img1 from "../assets/images/coms/member-myk.jpg";
 import img2 from "../assets/images/coms/member-dhara.png";
@@ -71,7 +73,10 @@ const TeamMemberCard = () => {
 
                     {/* Mobile Swiper View */}
                     <div className="d-block d-md-none">
-                        <Swiper spaceBetween={10} slidesPerView={1}>
+                        <Swiper modules={[Pagination]}
+                            spaceBetween={10}
+                            slidesPerView={1}
+                            pagination={{ clickable: true }}>
                             {teamData.map((member, index) => (
                                 <SwiperSlide key={index}>
                                     <div className="team-member">

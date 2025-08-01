@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Spinner } from 'reactstrap';
 import ChandImg from "../assets/images/coms/chand.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from 'emailjs-com';
 import '../assets/css/ContactUsSection.css';
+import { useNavigate } from 'react-router-dom';
 
 const ContactUsSection = () => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -14,6 +17,7 @@ const ContactUsSection = () => {
     });
 
     const [status, setStatus] = useState(null);
+    const [loading, setLoading] = useState(false); // loader state
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
@@ -29,6 +33,7 @@ const ContactUsSection = () => {
 
     // const handleSubmit = (e) => {
     //     e.preventDefault();
+    //     setLoading(true); // start loader
 
     //     const templateParams = {
     //         name: formData.name,
@@ -40,19 +45,24 @@ const ContactUsSection = () => {
     //         .then((response) => {
     //             console.log('Email sent successfully:', response);
     //             setStatus('success');
-    //             setFormData({ name: '', email: '', message: '' }); // Reset form
+    //             setFormData({ name: '', email: '', message: '' });
+    //             setTimeout(() => {
+    //                 navigate('/thankyou-contact'); // 🔁 redirect after success
+    //             }, 1000);
     //         })
     //         .catch((error) => {
     //             console.log('Failed to send email:', error);
     //             setStatus('error');
+    //         })
+    //         .finally(() => {
+    //             setLoading(false); // stop loader
     //         });
-    // };
+    //     };
 
     return (
         <section className="contact-us-section py-5">
             <Container>
                 <Row>
-                    {/* Left: Contact Info */}
                     <Col md="8" className="mb-4 mb-md-0">
                         <h1 className="heading-bold">Contact Us</h1>
                         <p className="mt-3 mb-3">
@@ -70,7 +80,6 @@ const ContactUsSection = () => {
                         </p>
                     </Col>
 
-                    {/* Right: Contact Form */}
                     <Col md="4">
                         <Form className='shadow-sm p-3' 
                         // onSubmit={handleSubmit}
@@ -120,14 +129,29 @@ const ContactUsSection = () => {
                                     </FormGroup>
                                 </Col>
                                 <Col md="12" className='mb-1 text-end'>
-                                    <Button type="submit" className="btn-sub text-decoration-none me-0" >
-                                        Send us
-                                        <span style={{ position: 'relative' }}>
-                                            <img src={ChandImg} alt='joyful' className='btm-arc' />
-                                        </span>
+                                    <Button
+                                        type="submit"
+                                        className="btn-sub text-decoration-none me-0"
+                                        disabled={loading} // Disable when loading
+                                    >
+                                        {loading ? (
+                                            <Spinner size="sm" color="dark" />
+                                        ) : (
+                                            <>
+                                                send us
+                                                <span style={{ position: 'relative' }}>
+                                                    <img src={ChandImg} alt='joyful' className='btm-arc' />
+                                                </span>
+                                            </>
+                                        )}
                                     </Button>
-                                    {status === 'success' && <p className="text-success mt-3">Message sent successfully!</p>}
-                                    {status === 'error' && <p className="text-danger mt-3">Failed to send message. Please try again.</p>}
+
+                                    {/* {status === 'success' && (
+                                        <p className="text-success mt-3">Message sent successfully!</p>
+                                    )}
+                                    {status === 'error' && (
+                                        <p className="text-danger mt-3">Failed to send message. Please try again.</p>
+                                    )} */}
                                 </Col>
                             </Row>
                         </Form>

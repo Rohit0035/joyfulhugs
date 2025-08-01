@@ -20,11 +20,11 @@ const Footer = () => {
           <Col md="2" sm="6" xs="6" className='mb-3'>
             <h6>TEAM</h6>
             <a href="/team-culture">Founder</a>
-            <a href="/contact">Join Us</a>
+            <a href="/job">Join Us</a>
           </Col>
           <Col md="2" sm="6" xs="6" className='mb-3' >
             <h6>PHILOSOPHY</h6>
-            <a href="/adultgarten-philosophy">Adultkarten</a>
+            <a href="/adultgarten-philosophy">Adultgarten </a>
           </Col>
           <Col md="2" sm="6" xs="6" className='mb-3'>
             <h6>JOBS</h6>
