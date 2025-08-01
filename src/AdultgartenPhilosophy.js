@@ -53,14 +53,14 @@ const AdultgartenPhilosophy = () => {
             <section className='pt-70' style={{ backgroundColor: '#edeee9' }}>
                 <Container>
                     <Row>
-                        <Col md="5">
+                        <Col xs="12" sm="12" md="12" lg="5">
                             <div className='mb-3' data-aos="zoom-in">
                                 <h1 className='heading-bold3'>CURIOSITY</h1>
                                 <h1 className='heading-bold3'>EDUCATE </h1>
                                 <h1 className='heading-bold3'>EVOLVE </h1>
                             </div>
                         </Col>
-                        <Col md="7">
+                        <Col  xs="12" sm="12" md="12" lg="7">
                             <div className='text-start mb-70 mob-spc-bt' data-aos="zoom-in">
                                 <p className='mt-3 mb-4'>
                                     We believe adults seek more than answers — they seek meaning.

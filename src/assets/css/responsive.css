@@ -100,7 +100,10 @@
   } 
   .mob-spc-bt {
     padding-bottom: 40px;
-  }   
+  }  
+  .join-team-section {
+    padding: 450px 0px;
+  } 
  
 }
 
@@ -108,6 +111,40 @@
 @media only screen and (min-width: 600px) {
   .destopk-font {
     font-size: 14px !important;
+  }
+   .heading-bold2 {
+    font-size: 72px;
+   }
+   .heading-bold {
+    font-size: 38px;
+   } 
+   .overlaytxt2 {
+    position: absolute;
+    top: 85px;
+    right: 40px;
+   }
+    .pt-st {
+     padding-top: 0px;
+    }
+   .job-head {
+     font-size: 32px;
+   } 
+   img.ch-j {
+    left: 0px;
+  }  
+   img.mt-moon {
+    position: relative;
+    width: 60%;
+    right: -40px;
+    top: -80px;
+  }
+  .join-team-section {
+    height: 530px;
+    background-position: unset;
+    padding: unset;
+  }
+  .bottom-right-str {
+    right: 40px;
   }
    
 }
@@ -118,12 +155,81 @@
     font-size: 14px !important;
     padding: 0px !important;
   }
- 
+   .heading-bold2 {
+    font-size: 72px;
+   }
+   .heading-bold {
+    font-size: 38px;
+   } 
+   .overlaytxt2 {
+    position: absolute;
+    top: 85px;
+    right: 40px;
+    }
+    .pt-st {
+     padding-top: 0px;
+    }
+    .job-head {
+     font-size: 32px;
+   } 
+   img.ch-j {
+    left: 0px;
+  }  
+  img.mt-moon {
+    position: relative;
+    width: 60%;
+    right: -40px;
+    top: -80px;
+  }
+  .join-team-section {
+    height: 530px;
+    background-position: unset;
+    padding: unset;
+  }
+ .bottom-right-str {
+    right: 40px;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
- 
+  .heading-bold2 {
+    font-size: 94px;
+   }
+   .heading-bold {
+    font-size: 64px;
+   } 
+   .overlaytxt, .overlaytxt2 {
+    position: absolute;
+    top: 200px;
+    right: 212px;
+   }  
+   .pt-st {
+    padding-top: 200px;
+   }   
+   .job-head {
+    font-size: 42px;
+   } 
+   img.ch-j {
+    left: 135px;
+    position: absolute;
+    top: -162px;
+    width: 427px;
+   }
+    img.mt-moon {
+    position: relative;
+    width: 62%;
+    right: -70px;
+    top: -145px;
+  }
+   .join-team-section {
+    height: 920px;
+    background-position: unset;
+    padding: unset;
+  }
+  .bottom-right-str {
+    right: 132px;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -133,8 +239,55 @@
     font-weight: 400 !important;
     margin: 0 12px !important;
   }
+   .heading-bold2 {
+    font-size: 94px;
+   }
+   .heading-bold {
+    font-size: 64px;
+   } 
+   .overlaytxt, .overlaytxt2 {
+    position: absolute;
+    top: 200px;
+    right: 212px;
+   }  
+   .pt-st {
+    padding-top: 200px;
+   } 
+   .job-head {
+    font-size: 42px;
+   } 
+   img.ch-j {
+    left: 135px;
+    position: absolute;
+    top: -162px;
+    width: 427px;
+   }
+   img.mt-moon {
+    position: relative;
+    width: 62%;
+    right: -70px;
+    top: -145px;
+  }
+  .join-team-section {
+    height: 920px;
+    background-position: unset;
+    padding: unset;
+  }
+  .bottom-right-str {
+    right: 132px;
+  }
 }
 
+
+@media only screen 
+  and (min-width: 1680px) 
+  and (min-height: 1050px) {
+   .join-team-section {
+      height: 1030px;
+      background-position: unset;
+      padding: unset;
+  }
+}
 
 @media only screen 
   and (min-width: 1920px) 
@@ -146,7 +299,7 @@
     padding-left: 190px !important;
   }
   .join-team-section {
-    height: 100vh;
+    height: 1030px;
     background-position: unset;
     padding: unset;
   }
@@ -185,3 +338,6 @@
     bottom: -35px;
   }
 }  
+
+
+

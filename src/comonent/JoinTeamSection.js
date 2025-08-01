@@ -19,7 +19,7 @@ const JoinTeamSection = () => {
                     </div>
 
                     <div className="bottom-right-str">
-                        <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black">know us
+                        <Link to="/job" className="mt-2 fs-5 text-decoration-none text-black">join us
                             <span style={{
                                 position: 'relative',
                             }}>

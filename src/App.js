@@ -8,7 +8,7 @@ import Job from './pages/Job';
 import ContactUs from './pages/ContactUs';
 import ThankJob from './pages/ThankJob';
 import ThankContact from './pages/ThankContact';
-import Loader from './comonent/Loader';
+import LoaderImg from './comonent/LoaderImg';
 import ScrollToTop from './comonent/ScrollToTop';
 import AddPositions from './pages/AddPositions';
 
@@ -39,12 +39,12 @@ function App() {
         <Route path="/team-culture" element={<TeamCulture />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/adultgarten-philosophy" element={<AdultgartenPhilosophy />} />
-        <Route path="/job" element={<Job  positions={positions} deletePosition={deletePosition} />} />
-        <Route path="/loader" element={<Loader />} />
+        <Route path="/job" element={<Job positions={positions} deletePosition={deletePosition} />} />
+        <Route path="/loader" element={<LoaderImg />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/thankyou" element={<ThankJob />} />
         <Route path="/thankyou-contact" element={<ThankContact />} />
-                <Route path="/add-position" element={<AddPositions  positions={positions} addPosition={addPosition} deletePosition={deletePosition}/>} />
+        <Route path="/add-position" element={<AddPositions positions={positions} addPosition={addPosition} deletePosition={deletePosition} />} />
 
       </Routes>
     </div>

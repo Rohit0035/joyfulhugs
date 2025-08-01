@@ -36,7 +36,7 @@ const ContactUs = () => {
             <section className="contact-section">
                 <Container>
                     <Row className='st-cus-space1'>
-                        <Col md="4" className='mb-3'>
+                        <Col xs="12" sm="12" md="12" lg="4" className='mb-3'>
                             <p className='mb-0' data-aos="zoom-in">
                                 <Link className='text-black text-decoration-none'>
                                     mayanksolanki@joyfulhugs.in
@@ -50,7 +50,7 @@ const ContactUs = () => {
                         </Col>
                         <Col md="4">
                         </Col>
-                        <Col md="4" className='mb-3' data-aos="zoom-in">
+                        <Col  xs="12" sm="12" md="12" lg="4"  className='mb-3' data-aos="zoom-in">
                             <p>
                                 Dev X Binori B square 4th floor Sindhu<br /> Bhavan Road Ahmedabad 380059
                             </p>

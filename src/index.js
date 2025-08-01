@@ -6,30 +6,29 @@ import App from './App';
 import './assets/css/Style.css';
 import './assets/css/responsive.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import JoyfulLoader from './comonent/JoyfulLoader';
-import Loader from './comonent/Loader';
+// import Loader from './comonent/Loader';
 
 const Root = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    },4000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   },4000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
-  return loading ? <Loader/> : (
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  );
-
-  // return  (
+  // return loading ? <Loader/> : (
   //   <BrowserRouter>
   //     <App />
   //   </BrowserRouter>
   // );
+
+  return  (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

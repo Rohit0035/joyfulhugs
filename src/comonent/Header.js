@@ -14,6 +14,7 @@ import {
 import Logo from "../assets/images/coms/logo.png";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "../assets/css/Header.css";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [isOffcanvasOpen, setIsOffcanvasOpen] = useState(false);
@@ -34,16 +35,16 @@ const Header = () => {
             <Container className="d-flex align-items-center justify-content-between">
                 {/* Logo */}
                 <NavbarBrand href="/" className="p-0 m-0">
-                    <img src={Logo} alt="Logo"  className='logo' />
+                    <img src={Logo} alt="Logo" className='logo' />
                 </NavbarBrand>
 
                 {/* Desktop Menu */}
                 <Nav className="d-none d-md-flex align-items-center gap-4" navbar>
                     {navLinks.map((item, index) => (
                         <NavItem key={index}>
-                            <NavLink className="text-dark desktop-font" href={item.path}>
+                            <Link className="nav-link text-dark desktop-font" to={item.path}>
                                 {item.label}
-                            </NavLink>
+                            </Link>
                         </NavItem>
                     ))}
                 </Nav>
@@ -69,10 +70,9 @@ const Header = () => {
                     <Nav vertical className="menu-custom">
                         {navLinks.map((item, index) => (
                             <NavItem key={index}>
-                                <NavLink className="menu-bold text-black" href={item.path}>
+                                <Link className="menu-bold text-black nav-link" to={item.path}>
                                     {item.label}
-                                    {/* <span className="fs-5 fw-300 ms-5">0{index + 1}</span> */}
-                                </NavLink>
+                                </Link>
                             </NavItem>
                         ))}
                     </Nav>

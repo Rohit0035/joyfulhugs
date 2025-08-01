@@ -14,7 +14,7 @@ const TeamCultureSection = () => {
     }, []);
     return (
         <>
-            <section className="pt-70 pb-70">
+            <section className="pt-70 pb-70 spc-mb">
                 <Container>
                     <Row>
                         <Col md='5'>
@@ -36,12 +36,12 @@ const TeamCultureSection = () => {
                     {/* Left Text Column */}
                     <Col md="4" className="left-panel">
                         <div className="text-content text-center" data-aos="zoom-in">
-                            <h1 className="mb-1 heading-bold" style={{fontWeight:'300'}}>Team &</h1>
-                            <h1 className="mb-3 heading-bold" style={{fontWeight:'300'}}>Culture</h1>
+                            <h1 className="mb-1 heading-bold" style={{ fontWeight: '300' }}>Team &</h1>
+                            <h1 className="mb-3 heading-bold" style={{ fontWeight: '300' }}>Culture</h1>
                             <img src={Chand} alt='juyful' className='mt-moon' />
                         </div>
                         <div className="know-us-link pe-2 pb-4">
-                            <Link to="/contact" className="mt-2 fs-5 text-decoration-none text-black me-4">know us
+                            <Link to="/team-culture" className="mt-2 fs-5 text-decoration-none text-black me-4">know us
                                 <span style={{
                                     position: 'relative',
                                 }}>

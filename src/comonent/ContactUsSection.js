@@ -63,7 +63,7 @@ const ContactUsSection = () => {
         <section className="contact-us-section py-5">
             <Container>
                 <Row>
-                    <Col md="8" className="mb-4 mb-md-0">
+                    <Col xs="12" sm="12" md="12" lg="8" className="mb-5 mb-md-0">
                         <h1 className="heading-bold">Contact Us</h1>
                         <p className="mt-3 mb-3">
                             Dev X Binori B square 4th floor Sindhu Bhavan Road Ahmedabad 380059
@@ -80,7 +80,7 @@ const ContactUsSection = () => {
                         </p>
                     </Col>
 
-                    <Col md="4">
+                    <Col xs="12" sm="12" md="12" lg="4">
                         <Form className='shadow-sm p-3' 
                         // onSubmit={handleSubmit}
                         >

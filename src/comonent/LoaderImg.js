@@ -1,9 +1,9 @@
 // Loader.js
 import React from 'react';
-import '../assets/css/Loader.css'; 
+import '../assets/css/loader-2.css'; 
 import ArcImage from '../assets/images/coms/ch-j.png'; // Adjust path if needed
 
-const Loader = () => {
+const LoaderImg = () => {
   return (
     <div className="mainload">
       <div className="loader">
@@ -27,4 +27,4 @@ const Loader = () => {
   );
 };
 
-export default Loader;
+export default LoaderImg;
