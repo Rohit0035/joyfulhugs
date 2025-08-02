@@ -9,7 +9,7 @@ const LoaderImg = () => {
       <div className="loader">
         <span className="letter">J</span>
         <span className="letter">O</span>
-        <span className="letter">Y</span>
+        <span className="letter st-y">Y</span>
         <span className="letter">F</span>
         <span className="letter">U</span>
         <span className="letter">L</span>

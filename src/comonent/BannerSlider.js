@@ -26,7 +26,7 @@ const BannerSlider = () => {
             <section className="d-block d-sm-none">
                 <div className="banner-slider">
                     <Swiper
-                        modules={[Autoplay,EffectFade]}
+                        modules={[Autoplay, EffectFade]}
                         slidesPerView={1}
                         effect="fade"
                         loop={true}
@@ -34,7 +34,7 @@ const BannerSlider = () => {
                             delay: 2000,
                             disableOnInteraction: false
                         }}
-                        // pagination={{ clickable: true }}
+                    // pagination={{ clickable: true }}
                     >
                         <SwiperSlide>
                             <div className="slide slide-mb-1">
@@ -111,7 +111,7 @@ const BannerSlider = () => {
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                    <div className="custom-swiper-pagination text-center z-index"></div>
+                <div className="custom-swiper-pagination text-center z-index"></div>
 
             </section>
         </>

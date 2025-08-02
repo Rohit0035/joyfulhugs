@@ -1,8 +1,6 @@
- @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,800&display=swap');
-
 .mainload {
       margin: 0;
-      height: 90vh;
+      height: 100vh;
       background: #fff;
       display: flex;
       align-items: center;
@@ -10,23 +8,16 @@
       overflow: hidden;
     }
 
-  
-
-.loader {
-    font-family: 'Red Hat Display', sans-serif !important;
-    font-weight: 900;        /* Extra Bold */
-    font-style: italic;
+   .loader {
+    font-weight: bolder;
     position: relative;
-    font-size: 62px;
+    font-size: 60px;
+    /* font-family: Arial, sans-serif; */
     color: #000;
     display: flex;
-    width: 340px;
-    letter-spacing: -8px;
-    justify-content: center;
-
-}
-.letter.st-y {
-    margin-left: -7px;
+    gap: 5px;
+    width: 350px;
+    font-style: italic;
 }
 
     .letter {
@@ -84,38 +75,32 @@
 
     .hug-text {
       position: absolute;
-      top: 60px;
-      left: 240px;
-      font-size: 26px;
-      color: #000;
+      top: 61px;
+      left: 230px;
+      font-size: 32px;
+      color: yellow;
       opacity: 0;
       transform: translateY(-30px);
       animation: riseIn 0.8s ease-out forwards;
       animation-delay: 2.2s;
-      font-weight: 300 !important;
+      font-weight: 400;
       font-style: normal;
-      letter-spacing: -1px;
-      font-family: 'Red Rose' !important;
-
     }
 
     .company-text {
-    position: absolute;
-    bottom: -73px;
+     position: absolute;
+    bottom: -98px;
     left: 50%;
     transform: translateX(-50%) translateY(20px);
-    font-size: 18px;
+    font-size: 22px;
+    color: #000;
     opacity: 0;
     animation: riseIn 0.8s ease-out forwards;
     animation-delay: 3s;
     letter-spacing: 1px;
     width: 100%;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
-    margin-left: 24px;
-    font-family: "Red Rose", serif !important;
-    letter-spacing: 3px;
-    text-align: center;
     }
 
     @keyframes riseIn {
@@ -129,9 +114,9 @@
 
 .arc-image {
     position: absolute;
-    bottom: -30px;
+    bottom: -50px;
     right: 0px;
-    width: 206px;
+    width: 240px;
     height: auto;
     opacity: 0;
     transform: translateY(30px);
@@ -154,26 +139,5 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-
-/*  */
-@media only screen and (max-width: 600px) {
-  .loader {
-    font-size: 52px;
-  }
-  .company-text {
-    margin-left: 0px;
-    font-size: 16px;
-  }
-  .hug-text {
-    top: 50px;
-    left: 227px;
-  }
-  .arc-image {
-    bottom: -40px;
-    right: 20px;
-    width: 206px;
   }
 }
