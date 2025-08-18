@@ -11,12 +11,12 @@ const Footer = () => {
           <Col xs="6" sm="6" md="4" lg="2" className='mb-4'>
             <img src={Logo} alt='juyful' width='150px' />
           </Col>
-          <Col  xs="6" sm="6" md="4" lg="2" className='mb-4'>
+          <Col xs="6" sm="6" md="4" lg="2" className='mb-4'>
             <h6>TEAM</h6>
             <Link to="/team-culture">Founder</Link>
             <Link to="/job">Join Us</Link>
           </Col>
-          <Col  xs="6" sm="6" md="4" lg="2" className='mb-4' >
+          <Col xs="6" sm="6" md="4" lg="2" className='mb-4' >
             <h6>PHILOSOPHY</h6>
             <Link to="/adultgarten-philosophy">Adultgarten </Link>
           </Col>
@@ -24,7 +24,7 @@ const Footer = () => {
             <h6>JOBS</h6>
             <Link to="/job">Apply Now</Link>
           </Col>
-          <Col  xs="6" sm="6" md="4" lg="4"  className='mb-4'>
+          <Col xs="6" sm="6" md="4" lg="4" className='mb-4'>
             <h6>CONTACT US</h6>
             <Link to="mailto:uditbhattacharya@joyfulhugs.in"> uditbhattacharya@joyfulhugs.in</Link>
             <Link to="mailto:mayanksolanki@joyfulhugs.in"> mayanksolanki@joyfulhugs.in</Link>

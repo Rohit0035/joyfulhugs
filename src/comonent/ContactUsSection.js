@@ -3,9 +3,9 @@ import { Container, Row, Col, Form, FormGroup, Label, Input, Button, Spinner } f
 import ChandImg from "../assets/images/coms/chand.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import emailjs from 'emailjs-com';
-import '../assets/css/ContactUsSection.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import '../assets/css/ContactUsSection.css';
 
 const ContactUsSection = () => {
     const navigate = useNavigate();
@@ -17,7 +17,7 @@ const ContactUsSection = () => {
     });
 
     const [status, setStatus] = useState(null);
-    const [loading, setLoading] = useState(false); // loader state
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
@@ -25,39 +25,50 @@ const ContactUsSection = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
+        setFormData(prevData => ({
             ...prevData,
             [name]: value
         }));
     };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     setLoading(true); // start loader
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setStatus(null);
 
-    //     const templateParams = {
-    //         name: formData.name,
-    //         email: formData.email,
-    //         message: formData.message
-    //     };
+        // Prepare URL encoded form data
+        const params = new URLSearchParams();
+        params.append('user_name', formData.name);
+        params.append('user_email', formData.email);
+        params.append('message', formData.message);
 
-    //     emailjs.send('service_wwvospw', 'template_l4igkoh', templateParams, 'pCvCzDycsADCQ9ryA')
-    //         .then((response) => {
-    //             console.log('Email sent successfully:', response);
-    //             setStatus('success');
-    //             setFormData({ name: '', email: '', message: '' });
-    //             setTimeout(() => {
-    //                 navigate('/thankyou-contact'); // 🔁 redirect after success
-    //             }, 1000);
-    //         })
-    //         .catch((error) => {
-    //             console.log('Failed to send email:', error);
-    //             setStatus('error');
-    //         })
-    //         .finally(() => {
-    //             setLoading(false); // stop loader
-    //         });
-    //     };
+        try {
+            const response = await axios.post(
+                'https://joyfulhugs.com/api/send_contact_us_email.php',
+                params.toString(),
+                {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                }
+            );
+
+            if (response.status === 200 && response.data.status === 'success') {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => {
+                    navigate('/thankyou-contact');
+                }, 1000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error sending contact email:', error.response || error.message);
+            setStatus('error');
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <section className="contact-us-section py-5">
@@ -81,9 +92,7 @@ const ContactUsSection = () => {
                     </Col>
 
                     <Col xs="12" sm="12" md="12" lg="4">
-                        <Form className='shadow-sm p-3' 
-                        // onSubmit={handleSubmit}
-                        >
+                        <Form className='shadow-sm p-3' onSubmit={handleSubmit}>
                             <Row>
                                 <Col md="6" className='mb-1'>
                                     <FormGroup>
@@ -132,7 +141,7 @@ const ContactUsSection = () => {
                                     <Button
                                         type="submit"
                                         className="btn-sub text-decoration-none me-0"
-                                        disabled={loading} // Disable when loading
+                                        disabled={loading}
                                     >
                                         {loading ? (
                                             <Spinner size="sm" color="dark" />
@@ -145,7 +154,6 @@ const ContactUsSection = () => {
                                             </>
                                         )}
                                     </Button>
-
                                     {/* {status === 'success' && (
                                         <p className="text-success mt-3">Message sent successfully!</p>
                                     )}

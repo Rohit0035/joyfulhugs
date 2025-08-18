@@ -24,7 +24,7 @@ const OurBrand = () => {
                         </Col>
                         <Col md="7">
                             <p className="mb-0 mt-2" data-aos="zoom-in">
-                                We believe adulthood is not the end of becoming – it’s the beginning. That’s why we build brands that spark reflection, invite bold action, and meet adults where they are – with respect, imagination and honesty.
+                                We believe adulthood is not the end of becoming it’s the beginning. That’s why we build brands that spark reflection, invite bold action, and meet adults where they are with respect, imagination and honesty.
                             </p>
                         </Col>
                     </Row>

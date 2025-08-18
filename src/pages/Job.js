@@ -1,19 +1,104 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from '../comonent/Header';
 import Footer from '../comonent/Footer';
 import "../assets/css/job.css";
-import { Button, Col, Container, Form, Input, Label, Row, Card, CardBody } from 'reactstrap';
-import Chand from '../assets/images/coms/ch-j.png'
-import Chand2 from '../assets/images/coms/chand.png'
+import {
+    Button, Col, Container, Form, Input, Label, Row
+} from 'reactstrap';
+import Chand from '../assets/images/coms/ch-j.png';
+import Chand2 from '../assets/images/coms/chand.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-const Job = ({ positions, deletePosition }) => {
+const Job = () => {
+    const [formData, setFormData] = useState({
+        position: "",
+        name: "",
+        email: "",
+        answer1: "",
+        answer2: "",
+        answer3: "",
+        file: null,
+        link: ""
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [positions, setPositions] = useState([]);
+    const [loadingPositions, setLoadingPositions] = useState(true);
+    const navigate = useNavigate();
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
+
+        fetch("https://joyfulhugs.com/api/job_positions.php")
+            .then(response => response.json())
+            .then(data => {
+                if (data && Array.isArray(data.job_positions)) {
+                    setPositions(data.job_positions); // ✅ Correct key
+                } else {
+                    setPositions([]);
+                    console.error("Invalid positions format:", data);
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching positions:", error);
+                setPositions([]);
+            })
+            .finally(() => setLoadingPositions(false));
     }, []);
+
+    const handleChange = (e) => {
+        const { name, value, type, files } = e.target;
+        setFormData({
+            ...formData,
+            [name]: type === 'file' ? files[0] : value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const form = new FormData();
+        form.append("user_name", formData.name);
+        form.append("user_email", formData.email);
+        form.append("message", formData.position);
+        form.append("answer1", formData.answer1);
+        form.append("answer2", formData.answer2);
+        form.append("answer3", formData.answer3);
+        form.append("link", formData.link);
+        if (formData.file) form.append("my_file", formData.file);
+
+        try {
+            const response = await fetch("https://joyfulhugs.com/api/send_email_smtp.php", {
+                method: "POST",
+                body: form
+            });
+
+            if (response.ok) {
+                setFormData({
+                    position: "",
+                    name: "",
+                    email: "",
+                    answer1: "",
+                    answer2: "",
+                    answer3: "",
+                    file: null,
+                    link: ""
+                });
+                navigate("/thankyou");
+            } else {
+                alert("Failed to submit the form. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Error submitting form. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <>
             <Header />
@@ -25,7 +110,6 @@ const Job = ({ positions, deletePosition }) => {
                                 <h1 className='heading-bold'>
                                     Don't Just Apply <br />
                                     Respond.
-
                                 </h1>
                                 <span className="position-relative">
                                     <img src={Chand} alt='joyful' className='ch-j' />
@@ -35,24 +119,9 @@ const Job = ({ positions, deletePosition }) => {
                     </Row>
                 </Container>
             </section>
+
             <section className='job-sec2'>
                 <Container>
-                    {/* <Row>
-                        <Col md="12">
-                            <h4>Job Positions</h4>
-                            {positions.length === 0 ? (
-                                <p>No positions added yet.</p>
-                            ) : (
-                                positions.map((pos, index) => (
-                                    <Card key={index} className="mb-3">
-                                        <CardBody>
-                                            <strong>Position No:</strong> {pos}
-                                        </CardBody>
-                                    </Card>
-                                ))
-                            )}
-                        </Col>
-                    </Row> */}
                     <Row>
                         <Col md="12">
                             <p className='mt-0 mb-0' data-aos="zoom-in">
@@ -62,84 +131,112 @@ const Job = ({ positions, deletePosition }) => {
                                 We’re looking for thinkers who care.
                             </p>
                         </Col>
-
                         <Col md="12">
                             <p className='mt-5 mb-0' data-aos="zoom-in">
-                                If you’re the kind of person who sees learning as a lifelong habit, who doesn’t wait to be told what to do, and who enjoys being a beginner again and again — we want to hear from you. Not in a resume. In your own words.
+                                If you’re the kind of person who sees learning as a lifelong habit,
+                                who doesn’t wait to be told what to do, and who enjoys being a beginner again and again —
+                                we want to hear from you. Not in a resume. In your own words.
                             </p>
                         </Col>
                     </Row>
-                    <div className='mt-5 job-form' data-aos="zoom-in">
-                        <Form>
-                            <Row>
-                                <Col md='12' className='mb-3'>
-                                    <Label className='int-lbl'>POSITION :</Label>
-                                    <Input type="text" className='int-bg' />
-                                </Col>
-                                <Col md='12' className='mb-3'>
-                                    <Label className='int-lbl'>NAME :</Label>
-                                    <Input type="text" className='int-bg' />
-                                </Col>
-                                <Col md='12' className='mb-5'>
-                                    <Label className='int-lbl'>EMAIL ID :</Label>
-                                    <Input type="email" className='int-bg' />
-                                </Col>
-                                <Col md='12' className='mb-5'>
-                                    <Label className='int-lbl'>When did you last change your mind about something important? :</Label>
-                                    <Input
-                                        id="1"
-                                        name="text"
-                                        type="textarea"
-                                        className='int-bg'
-                                        style={{ height: '172px' }}
-                                    />
-                                </Col>
-                                <Col md='12' className='mb-5'>
-                                    <Label className='int-lbl'>What’s something unusual you’ve learned recently?</Label>
-                                    <Input
-                                        id="1"
-                                        name="text"
-                                        type="textarea"
-                                        className='int-bg'
-                                        style={{ height: '172px' }}
-                                    />
-                                </Col>
-                                <Col md='12' className='mb-5'>
-                                    <Label className='int-lbl'>Tell us about a time you worked on something you didn’t know how to do it</Label>
-                                    <Input
-                                        id="1"
-                                        name="text"
-                                        type="textarea"
-                                        className='int-bg'
-                                        style={{ height: '172px' }}
-                                    />
-                                </Col>
-                                <br />
-                                <br />
-                                <Col md='12' className='my-5'>
-                                    <h1 className='job-head'>Prefer structure? Sure, we get it.</h1>
-                                    <h1 className='job-head'>If you’d like to attach a CV, portfolio, or LinkedIn profile, you can.</h1>
-                                    <h1 className='job-head'>But it won’t be the reason we reach out to you. Your voice will.</h1>
-                                </Col>
-                                <Col md='12' className='mb-5'>
-                                    <Label className='int-lbl'>Upload file :</Label>
-                                    <Input type="file" className='int-bg' />
-                                </Col>
-                                <Col md='12' className='mb-5'>
-                                    <Label className='int-lbl'>Paste link :</Label>
-                                    <Input type="link" className='int-bg' />
-                                </Col>
-                                <Col md='12' className='mb-5 text-end'>
-                                    <Link to="/thankyou" className='btn-sub text-decoration-none' >
-                                        submit
-                                        <img src={Chand2} alt='joyful' className='sbm-chand' />
-                                        {/* <span>
-                                            <img src={Chand2} alt='joyful' className='sbm-chand' />
-                                        </span> */}
-                                    </Link>
-                                </Col>
-                            </Row>
-                        </Form>
+
+                    <div className='mt-5' data-aos="zoom-in">
+                        {loadingPositions ? (
+                            <div className="text-center my-5">
+                                <h3 className="text-black">Loading job positions...</h3>
+                            </div>
+                        ) : positions.length === 0 ? (
+                            <div className="text-center my-5">
+                                <h3 className="text-black">No current positions available</h3>
+                            </div>
+                        ) : (
+                            <div className='mt-5 job-form'>
+                                <Form onSubmit={handleSubmit}>
+                                    <Row>
+                                        <Col md='12' className='mb-3'>
+                                            <Label className='int-lbl'>POSITION :</Label>
+                                            <Input
+                                                type="select"
+                                                className='int-bg'
+                                                name="position"
+                                                value={formData.position}
+                                                onChange={handleChange}
+                                                required
+                                            >
+                                                <option value="">Select Position</option>
+                                                {positions.map((position, index) => (
+                                                    <option key={index} value={position}>
+                                                        {position}
+                                                    </option>
+                                                ))}
+                                            </Input>
+                                        </Col>
+                                        <Col md='12' className='mb-3'>
+                                            <Label className='int-lbl'>NAME :</Label>
+                                            <Input type="text" className='int-bg' name="name" value={formData.name} onChange={handleChange} required />
+                                        </Col>
+                                        <Col md='12' className='mb-5'>
+                                            <Label className='int-lbl'>EMAIL ID :</Label>
+                                            <Input type="email" className='int-bg' name="email" value={formData.email} onChange={handleChange} required />
+                                        </Col>
+                                        <Col md='12' className='mb-5'>
+                                            <Label className='int-lbl'>When did you last change your mind about something important? :</Label>
+                                            <Input
+                                                name="answer1"
+                                                type="textarea"
+                                                className='int-bg'
+                                                style={{ height: '172px' }}
+                                                value={formData.answer1}
+                                                onChange={handleChange}
+                                            />
+                                        </Col>
+                                        <Col md='12' className='mb-5'>
+                                            <Label className='int-lbl'>What’s something unusual you’ve learned recently?</Label>
+                                            <Input
+                                                name="answer2"
+                                                type="textarea"
+                                                className='int-bg'
+                                                style={{ height: '172px' }}
+                                                value={formData.answer2}
+                                                onChange={handleChange}
+                                            />
+                                        </Col>
+                                        <Col md='12' className='mb-5'>
+                                            <Label className='int-lbl'>Tell us about a time you worked on something you didn’t know how to do</Label>
+                                            <Input
+                                                name="answer3"
+                                                type="textarea"
+                                                className='int-bg'
+                                                style={{ height: '172px' }}
+                                                value={formData.answer3}
+                                                onChange={handleChange}
+                                            />
+                                        </Col>
+
+                                        <Col md='12' className='my-5'>
+                                            <h1 className='job-head'>Prefer structure? Sure, we get it.</h1>
+                                            <h1 className='job-head'>If you’d like to attach a CV, portfolio, or LinkedIn profile, you can.</h1>
+                                            <h1 className='job-head'>But it won’t be the reason we reach out to you. Your voice will.</h1>
+                                        </Col>
+
+                                        <Col md='12' className='mb-5'>
+                                            <Label className='int-lbl'>Upload file :</Label>
+                                            <Input type="file" className='int-bg' name="file" onChange={handleChange} required />
+                                        </Col>
+                                        <Col md='12' className='mb-5'>
+                                            <Label className='int-lbl'>Paste link :</Label>
+                                            <Input type="url" className='int-bg' name="link" value={formData.link} onChange={handleChange} />
+                                        </Col>
+                                        <Col md='12' className='mb-5 text-end'>
+                                            <Button type="submit" disabled={isSubmitting} className='btn-sub'>
+                                                {isSubmitting ? "Submitting..." : "Submit"}
+                                                <img src={Chand2} alt='joyful' className='sbm-chand' />
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </Form>
+                            </div>
+                        )}
                     </div>
                 </Container>
             </section>

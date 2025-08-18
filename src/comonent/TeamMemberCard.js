@@ -17,21 +17,21 @@ const teamData = [
         name: "MAYANK SOLANKI",
         role: "Founder",
         description:
-            "Mayank leads with quiet conviction and bold clarity, shaping a vision that inspires action and meaning. He believes in building not just a company, but a culture—where people feel seen, trusted, and driven by something larger than themselves. His leadership is grounded in purpose, and his greatest strength lies in bringing out the best in others.",
+            "Mayank leads with quiet conviction and bold clarity, shaping a vision that inspires action and meaning. He believes in building not just a company, but a culture where people feel seen, trusted, and driven by something larger than themselves. His leadership is grounded in purpose, and his greatest strength lies in bringing out the best in others.",
         image: img1,
     },
     {
         name: "UDIT BHATTACHARYA",
         role: "Innovation Head",
         description:
-            "Udit is the mind that shapes possibility into form—a builder of ideas, systems, and experiences that move people. With a rare blend of depth and precision, he brings vision to life through relentless curiosity and craft. His leadership sparks momentum, ensuring innovation is not just a word, but a way of working.",
+            "Udit is the mind that shapes possibility into form a builder of ideas, systems, and experiences that move people. With a rare blend of depth and precision, he brings vision to life through relentless curiosity and craft. His leadership sparks momentum, ensuring innovation is not just a word, but a way of working.",
         image: img3,
     },
     {
         name: "DHARA PITHIYA",
         role: "Communication Head",
         description:
-            "Dhara is the voice behind the vision—a communicator who listens deeply, speaks with intention, and connects meaning with emotion. With a rare sensitivity to both words and people, she ensures every message reflects the soul of the company. Her leadership brings clarity, coherence, and heart to how we're seen, heard, and felt.",
+            "Dhara is the voice behind the vision a communicator who listens deeply, speaks with intention, and connects meaning with emotion. With a rare sensitivity to both words and people, she ensures every message reflects the soul of the company. Her leadership brings clarity, coherence, and heart to how we're seen, heard, and felt.",
         image: img2,
     },
 ];

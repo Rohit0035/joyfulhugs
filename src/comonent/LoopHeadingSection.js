@@ -30,7 +30,7 @@ const LoopHeadingSection = () => {
                     <Row>
                         <Col md="12" className="text-container">
                             <h1 className="heading-bold mb-0" data-aos="fade-up">
-                                We believe adulthood is not a plateau – it’s a{' '}
+                                We believe adulthood is not a plateau it’s a{' '}
                                 <span className="typed-text">
                                     <TextTransition
                                         springConfig={presets.wobbly}
@@ -75,7 +75,7 @@ const LoopHeadingSection = () => {
                                 <p className="mt-0 mb-0 ">For the 25 year old finding their voice</p>
                                 <p className="mt-0 mb-0 ">For the 40 year old rewriting their story</p>
                                 <p className="mt-0 mb-0 ">For every adult brave enough to begin again</p>
-                                <p className="mt-4 mb-0 ">Because when adults evolve – societies shift, culture heal, future open</p>
+                                <p className="mt-4 mb-0 ">Because when adults evolve societies shift, culture heal, future open</p>
                                 <p className="mt-4 mb-0 ">This is adultgarten</p>
                             </div>
                         </Col>

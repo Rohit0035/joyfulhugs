@@ -38,7 +38,7 @@ const AdultgartenPhilosophy = () => {
                         <Col md="9">
                             <div className='pt-st' data-aos="zoom-in">
                                 <p className="mb-0">
-                                    “At Joyful Hugs, we see every adult as a living manuscript — never final, always unfolding. 
+                                    “At Joyful Hugs, we see every adult as a living manuscript never final, always unfolding. 
                                 </p>
                                 <p>
                                     In a world that often prizes certainty and completion, we honour the quiet strength it takes to remain a work in progress. That’s why we formed the Adultgarten Philosophy”
@@ -63,13 +63,13 @@ const AdultgartenPhilosophy = () => {
                         <Col  xs="12" sm="12" md="12" lg="7">
                             <div className='text-start mb-70 mob-spc-bt' data-aos="zoom-in">
                                 <p className='mt-3 mb-4'>
-                                    We believe adults seek more than answers — they seek meaning.
+                                    We believe adults seek more than answers they seek meaning.
                                 </p>
                                 <p className='mt-0 mb-4'>
-                                    Learning here is hands-on, reflective, and personal.
+                                    Learning here is hands on, reflective, and personal.
                                 </p>
                                 <p className='mt-0 mb-4'>
-                                    We grow by exploring, building, and questioning — not to escape life, but to engage with it more deeply.
+                                    We grow by exploring, building, and questioning not to escape life, but to engage with it more deeply.
                                 </p>
                                 <p className='mt-0 mb-4'>
                                     Evolution is not about becoming better, but becoming more ourselves.

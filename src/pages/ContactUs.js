@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-    Container, Row, Col, Card, CardBody, Button, Form, FormGroup, Input, Label
+    Container, Row, Col, Card, CardBody, Button, Form, FormGroup, Input, Label, Spinner
 } from 'reactstrap';
 import '../assets/css/ContactUs.css';
 import Header from '../comonent/Header';
@@ -9,17 +9,78 @@ import Chand2 from '../assets/images/coms/chand.png'
 import { Link } from 'react-router-dom';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from 'react-router-dom';
+import emailjs from 'emailjs-com';
+import ChandImg from "../assets/images/coms/chand.png";
+import axios from 'axios';
 
 const ContactUs = () => {
 
-       useEffect(() => {
-            AOS.init({ duration: 1000, once: false });
-        }, []);
+    const navigate = useNavigate();
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [status, setStatus] = useState(null);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+    }, []);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevData => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setStatus(null);
+
+        // Prepare URL encoded form data
+        const params = new URLSearchParams();
+        params.append('user_name', formData.name);
+        params.append('user_email', formData.email);
+        params.append('message', formData.message);
+
+        try {
+            const response = await axios.post(
+                'https://joyfulhugs.com/api/send_contact_us_email.php',
+                params.toString(),
+                {
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    }
+                }
+            );
+
+            if (response.status === 200 && response.data.status === 'success') {
+                setStatus('success');
+                setFormData({ name: '', email: '', message: '' });
+                setTimeout(() => {
+                    navigate('/thankyou-contact');
+                }, 1000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error('Error sending contact email:', error.response || error.message);
+            setStatus('error');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <>
-
             <Header />
-
             <section className='sec-contact'>
                 <Container>
                     <Row>
@@ -30,7 +91,6 @@ const ContactUs = () => {
                         </Col>
                     </Row>
                 </Container>
-
             </section>
 
             <section className="contact-section">
@@ -50,7 +110,7 @@ const ContactUs = () => {
                         </Col>
                         <Col md="4">
                         </Col>
-                        <Col  xs="12" sm="12" md="12" lg="4"  className='mb-3' data-aos="zoom-in">
+                        <Col xs="12" sm="12" md="12" lg="4" className='mb-3' data-aos="zoom-in">
                             <p>
                                 Dev X Binori B square 4th floor Sindhu<br /> Bhavan Road Ahmedabad 380059
                             </p>
@@ -61,39 +121,86 @@ const ContactUs = () => {
 
             <section className='bx-form-sec2'>
                 <Container>
-                    <Row>
-                        <Col md="12">
-                            <Form>
-                                <div className='contact-form'>
+                    <Form className='' onSubmit={handleSubmit}>
+                        <div className='contact-form'>
+                            <Row>
+                                <Col md="12">
                                     <Row>
-                                        <Col md="12" className='mb-3'>
-                                           <Label>Your Name</Label>
-                                           <Input type="text" />
+                                        <Col md="12" className='mb-1'>
+                                            <FormGroup>
+                                                <Label for="name">Your Name</Label>
+                                                <Input
+                                                    type="text"
+                                                    id="name"
+                                                    name="name"
+                                                    placeholder="Your name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </FormGroup>
                                         </Col>
-                                       <Col md="12" className='mb-3'>
-                                           <Label>Email</Label>
-                                           <Input type="email" />
+                                        <Col md="12" className='mb-1'>
+                                            <FormGroup>
+                                                <Label for="email">Email</Label>
+                                                <Input
+                                                    type="email"
+                                                    id="email"
+                                                    name="email"
+                                                    placeholder="Your email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </FormGroup>
                                         </Col>
-                                       <Col md="12" className='mb-3'>
-                                           <Label>Message</Label>
-                                           <Input type="textarea"  style={{height:'150px'}} />
+                                        <Col md="12" className='mb-1'>
+                                            <FormGroup>
+                                                <Label for="message">Message</Label>
+                                                <Input
+                                                    type="textarea"
+                                                    id="message"
+                                                    name="message"
+                                                    rows="2"
+                                                    placeholder="Your message..."
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                    style={{ height: '150px' }}
+                                                />
+                                            </FormGroup>
                                         </Col>
                                     </Row>
-                                </div>
-                            </Form>
-                            <Col md="12">
-                               <div className='text-end mt-4'>
-                                <Link to="/thankyou-contact" className='btn-sub text-decoration-none'>
-                                        submit
-                                          <img src={Chand2} alt='joyful' className='sbm-chand' />
-                                        {/* <span>
-                                            <img src={Chand2} alt='joyful' className='sbm-chand' />
-                                        </span> */}
-                                    </Link>
-                               </div>
+                                </Col>
+                            </Row>
+                        </div>
+                        <Row>
+                            <Col md="12" className='mb-1 text-end mt-4'>
+                                <Button
+                                    type="submit"
+                                    className="btn-sub text-decoration-none me-0"
+                                    disabled={loading}
+                                >
+                                    {loading ? (
+                                        <Spinner size="sm" color="dark" />
+                                    ) : (
+                                        <>
+                                            submit
+                                            <span style={{ position: 'relative' }}>
+                                                <img src={ChandImg} alt='joyful' className='btm-arc' />
+                                            </span>
+                                        </>
+                                    )}
+                                </Button>
+                                {/* {status === 'success' && (
+                                    <p className="text-success mt-3">Message sent successfully!</p>
+                                )}
+                                {status === 'error' && (
+                                    <p className="text-danger mt-3">Failed to send message. Please try again.</p>
+                                )} */}
                             </Col>
-                        </Col>
-                    </Row>
+                        </Row>
+                    </Form>
                 </Container>
             </section>
 

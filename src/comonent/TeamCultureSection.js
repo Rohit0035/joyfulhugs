@@ -25,7 +25,7 @@ const TeamCultureSection = () => {
                         </Col>
                         <Col md='7'>
                             <p className="mt-3  mb-0">
-                                We build brands that challenge, uplift, and awaken because the world doesn’t change when people know more – it change when they start living what they believe.
+                                We build brands that challenge, uplift, and awaken because the world doesn’t change when people know more it change when they start living what they believe.
                             </p>
                         </Col>
                     </Row>

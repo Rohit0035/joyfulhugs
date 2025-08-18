@@ -1,0 +1,179 @@
+ @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@1,800&display=swap');
+
+.mainload {
+      margin: 0;
+      height: 90vh;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+  
+
+.loader {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-weight: 900;        /* Extra Bold */
+    font-style: italic;
+    position: relative;
+    font-size: 62px;
+    color: #000;
+    display: flex;
+    width: 340px;
+    letter-spacing: -8px;
+    justify-content: center;
+
+}
+.letter.st-y {
+    margin-left: -7px;
+}
+
+    .letter {
+      opacity: 0;
+      transform: translateY(-100px);
+      animation: drop 0.6s forwards;
+    }
+
+    .letter:nth-child(1) { animation-delay: 0.1s; }
+    .letter:nth-child(2) { animation-delay: 0.3s; }
+    .letter:nth-child(3) { animation-delay: 0.5s; }
+    .letter:nth-child(4) { animation-delay: 0.7s; }
+    .letter:nth-child(5) { animation-delay: 0.9s; }
+    .letter:nth-child(6) { animation-delay: 1.1s; }
+
+    @keyframes drop {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .arc-container {
+      position: absolute;
+      bottom: -94px;
+      right: -30px;
+      width: 240px;
+      height: 120px;
+      pointer-events: none;
+      rotate: 150deg;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .paths {
+      fill: none;
+      stroke: yellow;
+      stroke-width: 12;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      animation: drawArc 1.2s ease-out forwards;
+      animation-delay: 1.8s;
+    }
+
+    @keyframes drawArc {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .hug-text {
+      position: absolute;
+      top: 60px;
+      left: 240px;
+      font-size: 26px;
+      color: #000;
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: riseIn 0.8s ease-out forwards;
+      animation-delay: 2.2s;
+      font-weight: 300 !important;
+      font-style: normal;
+      letter-spacing: -1px;
+      font-family: 'Red Rose' !important;
+
+    }
+
+    .company-text {
+    position: absolute;
+    bottom: -73px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    font-size: 18px;
+    opacity: 0;
+    animation: riseIn 0.8s ease-out forwards;
+    animation-delay: 3s;
+    letter-spacing: 1px;
+    width: 100%;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 24px;
+    font-family: "Red Rose", serif !important;
+    letter-spacing: 3px;
+    text-align: center;
+    }
+
+    @keyframes riseIn {
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+
+
+
+.arc-image {
+    position: absolute;
+    bottom: -30px;
+    right: 0px;
+    width: 206px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    pointer-events: none;
+}
+
+.arc-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Delayed fade-in */
+.delayed-fade-in {
+  animation: fadeRise 0.8s ease-out forwards;
+  animation-delay: 1.6s; /* Adjust to match JOYFUL drop end */
+}
+
+@keyframes fadeRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*  */
+@media only screen and (max-width: 600px) {
+  .loader {
+    font-size: 52px;
+  }
+  .company-text {
+    margin-left: 0px;
+    font-size: 16px;
+  }
+  .hug-text {
+    top: 50px;
+    left: 227px;
+  }
+  .arc-image {
+    bottom: -40px;
+    right: 20px;
+    width: 206px;
+  }
+}

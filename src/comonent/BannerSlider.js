@@ -31,7 +31,7 @@ const BannerSlider = () => {
                         effect="fade"
                         loop={true}
                         autoplay={{
-                            delay: 2000,
+                            delay: 4000,
                             disableOnInteraction: false
                         }}
                     // pagination={{ clickable: true }}
@@ -90,7 +90,7 @@ const BannerSlider = () => {
                                 <div className="slide-content">
                                     <h2 className=" position-relative text-dark fw-300">
                                         We are reimagining adult learning
-                                        <b>for the dreamers, doers, and the rebels</b>
+                                        <b> for the dreamers, doers, and the rebels</b>
                                         <span className="position-relative">
                                             <img src={Chand} alt="Star" className="m3" />
                                         </span>

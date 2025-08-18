@@ -133,7 +133,7 @@ const TeamCulture = ({ name }) => {
                         <Col md="8">
                             <div className='mb-2 mt-2'>
                                 <p>
-                                    We are learners, teachers, Dreamers – bound by the belief that education is humanity greatest tool for building a better future
+                                    We are learners, teachers, Dreamers bound by the belief that education is humanity greatest tool for building a better future
                                 </p>
                             </div>
                         </Col>

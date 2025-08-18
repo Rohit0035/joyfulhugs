@@ -18,7 +18,7 @@ const Slider = () => {
                 modules={[Navigation, Autoplay, EffectFade]}
                 // navigation
                 effect="fade"
-                autoplay={{ delay: 2000 }}
+                autoplay={{ delay: 4000 }}
                 loop
                 className="main-swiper"
             >
