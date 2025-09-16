@@ -10,6 +10,7 @@ import Chand2 from '../assets/images/coms/chand.png';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from 'react-router-dom';
+import JobsList from "../comonent/JobsList";
 
 const Job = () => {
     const [formData, setFormData] = useState({
@@ -238,6 +239,8 @@ const Job = () => {
                             </div>
                         )}
                     </div>
+
+                       <JobsList/>
                 </Container>
             </section>
             <Footer />

@@ -206,3 +206,23 @@ textarea{
     right: -30px;
     top: 20px;
 }
+
+.icon-wd {
+    width: 20px;
+}
+.job-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+.job-card:hover {
+  transform: translateY(-8px);
+  /* box-shadow: 0 12px 30px rgba(0,0,0,0.2); */
+}
+.job-details {
+    background:#e5e5e1;
+}
+.transition {
+   transition: transform 0.3s ease;
+}
+.rotate {
+   transform: rotate(180deg);
+}
