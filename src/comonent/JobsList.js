@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import {
-  Card,
-  CardBody,
-  Collapse,
-  Button,
-} from "reactstrap";
+import { Card, CardBody, Collapse, Button } from "reactstrap";
 import {
   FaBriefcase,
   FaBuilding,
@@ -14,7 +9,7 @@ import {
   FaChevronDown,
   FaPaperPlane
 } from "react-icons/fa";
-import Chand2 from '../assets/images/coms/chand.png';
+import Chand2 from "../assets/images/coms/chand.png";
 
 const jobsData = [
   {
@@ -46,21 +41,24 @@ const jobsData = [
   }
 ];
 
-const JobsList = () => {
+const JobsList = ({ jobs = [],selectedJob, setSelectedJob }) => {
   const [openId, setOpenId] = useState(null);
 
-  const toggle = (id) => {
+  const toggle = id => {
     setOpenId(openId === id ? null : id);
   };
 
   return (
     <div className="container my-5">
-      <h2 className="text-center mb-4 fw-bold text-black" style={{ color: "#333" }}>
+      <h2
+        className="text-center mb-4 fw-bold text-black"
+        style={{ color: "#333" }}
+      >
         Available Jobs
       </h2>
 
       <div className="row">
-        {jobsData.map((job) => (
+        {jobs.map(job =>
           <div key={job.id} className="col-md-6">
             <Card
               className="shadow-sm border-0 rounded-4 job-card mb-3"
@@ -69,7 +67,10 @@ const JobsList = () => {
               <CardBody>
                 <div className="d-flex justify-content-between align-items-center">
                   <div>
-                    <h5 className="fw-bold mb-1 text-black" style={{ color: "#000" }}>
+                    <h5
+                      className="fw-bold mb-1 text-black"
+                      style={{ color: "#000" }}
+                    >
                       <FaBriefcase className="me-2 text-warning icon-wd" />
                       {job.title}
                     </h5>
@@ -80,38 +81,44 @@ const JobsList = () => {
                     onClick={() => toggle(job.id)}
                   >
                     <FaChevronDown
-                      className={`transition icon-wd ${openId === job.id ? "rotate" : ""}`}
-
+                      className={`transition icon-wd ${openId === job.id
+                        ? "rotate"
+                        : ""}`}
                     />
                   </Button>
                 </div>
 
                 <Collapse isOpen={openId === job.id}>
                   <div className="mt-3 p-3 rounded-3 job-details">
-                    <p className="text-black">
+                    {/* <p className="text-black">
                       <FaMapMarkerAlt className="me-2 text-warning icon-wd" />
                       <strong>Location:</strong> <small>{job.location}</small>
                     </p>
                     <p className="text-black">
                       <FaMoneyBillWave className="me-2 text-warning icon-wd" />
                       <strong>Salary:</strong> <small>{job.salary}</small>
-                    </p>
-                    <p className="text-black">
-                      <FaInfoCircle className="me-2 text-warning icon-wd" />
-                      <strong>Description:</strong> <small>{job.description}</small>
-                    </p>
-                    <Button type="submit" className='btn-sub'>
-                       Apply
-                      <img src={Chand2} alt='joyful' className='sbm-chand' />
+                    </p> */}
+                    {/* <p className="text-black"> */}
+                      {/* <FaInfoCircle className="me-2 text-warning icon-wd" /> */}
+                      {/* <strong>Description:</strong>{" "} */}
+                      {/* <small>{job.description}</small> */}
+                      <div
+                            className="prose"
+                            dangerouslySetInnerHTML={{ __html: job?.description }}
+                        />
+                    {/* </p> */}
+                    <Button type="submit" className="btn-sub"
+                    onClick={() => setSelectedJob(job)}>
+                      Apply
+                      <img src={Chand2} alt="joyful" className="sbm-chand" />
                     </Button>
                   </div>
                 </Collapse>
               </CardBody>
             </Card>
           </div>
-        ))}
+        )}
       </div>
-
     </div>
   );
 };

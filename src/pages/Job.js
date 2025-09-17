@@ -11,10 +11,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useNavigate } from 'react-router-dom';
 import JobsList from "../comonent/JobsList";
+import { API_BASE_URL } from "../utils/api-config";
+import axios from "axios";
 
 const Job = () => {
     const [formData, setFormData] = useState({
-        position: "",
+        job_id: "",
         name: "",
         email: "",
         answer1: "",
@@ -26,28 +28,32 @@ const Job = () => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [positions, setPositions] = useState([]);
+    const [jobs, setJobs] = useState([]);
+    const [selectedJob, setSelectedJob] = useState(null);
+
     const [loadingPositions, setLoadingPositions] = useState(true);
     const navigate = useNavigate();
 
     useEffect(() => {
-        AOS.init({ duration: 1000, once: false });
-
-        fetch("https://joyfulhugs.com/api/job_positions.php")
-            .then(response => response.json())
-            .then(data => {
-                if (data && Array.isArray(data.job_positions)) {
-                    setPositions(data.job_positions); // ✅ Correct key
-                } else {
-                    setPositions([]);
-                    console.error("Invalid positions format:", data);
-                }
-            })
-            .catch(error => {
-                console.error("Error fetching positions:", error);
+    setLoadingPositions(true);
+    axios
+        .get(`${API_BASE_URL}/get-jobs`)
+        .then((response) => {
+            console.log(response);
+            if (response.data.success) {
+                // setPositions(response.job_positions); // ✅ Correct key if needed
+                setJobs(response.data.data); // ✅ Correct key
+            } else {
                 setPositions([]);
-            })
-            .finally(() => setLoadingPositions(false));
-    }, []);
+                console.error("Invalid positions format:", response);
+            }
+        })
+        .catch((error) => {
+            console.error("Error fetching positions:", error);
+            setPositions([]);
+        })
+        .finally(() => setLoadingPositions(false));
+}, []);
 
     const handleChange = (e) => {
         const { name, value, type, files } = e.target;
@@ -58,47 +64,55 @@ const Job = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+    e.preventDefault();
+    setIsSubmitting(true);
 
-        const form = new FormData();
-        form.append("user_name", formData.name);
-        form.append("user_email", formData.email);
-        form.append("message", formData.position);
-        form.append("answer1", formData.answer1);
-        form.append("answer2", formData.answer2);
-        form.append("answer3", formData.answer3);
-        form.append("link", formData.link);
-        if (formData.file) form.append("my_file", formData.file);
+    const form = new FormData();
+    form.append("job_id", selectedJob?.id);
+    form.append("user_name", formData.name);
+    form.append("user_email", formData.email);
+    form.append("message", formData.position);
+    form.append("answer1", formData.answer1);
+    form.append("answer2", formData.answer2);
+    form.append("answer3", formData.answer3);
+    form.append("link", formData.link);
+    if (formData.file) form.append("my_file", formData.file);
 
-        try {
-            const response = await fetch("https://joyfulhugs.com/api/send_email_smtp.php", {
-                method: "POST",
-                body: form
-            });
-
-            if (response.ok) {
-                setFormData({
-                    position: "",
-                    name: "",
-                    email: "",
-                    answer1: "",
-                    answer2: "",
-                    answer3: "",
-                    file: null,
-                    link: ""
-                });
-                navigate("/thankyou");
-            } else {
-                alert("Failed to submit the form. Please try again.");
+    try {
+        const response = await axios.post(
+            `${API_BASE_URL}/submit-job-application-form`,
+            form,
+            {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
             }
-        } catch (error) {
-            console.error("Error submitting form:", error);
-            alert("Error submitting form. Please try again.");
-        } finally {
-            setIsSubmitting(false);
+        );
+
+        if (response.data.success) {
+            // alert("Form submitted successfully!");
+            setSelectedJob(null);
+            setFormData({
+                job_id: "",
+                name: "",
+                email: "",
+                answer1: "",
+                answer2: "",
+                answer3: "",
+                file: null,
+                link: "",
+            });
+            navigate("/thankyou");
+        } else {
+            alert("Failed to submit the form. Please try again.");
         }
-    };
+    } catch (error) {
+        console.error("Error submitting form:", error);
+        alert("Error submitting form. Please try again.");
+    } finally {
+        setIsSubmitting(false);
+    }
+};
 
     return (
         <>
@@ -140,37 +154,41 @@ const Job = () => {
                             </p>
                         </Col>
                     </Row>
-
-                    <div className='mt-5' data-aos="zoom-in">
-                        {loadingPositions ? (
+                    {
+                    loadingPositions ? (
                             <div className="text-center my-5">
                                 <h3 className="text-black">Loading job positions...</h3>
                             </div>
-                        ) : positions.length === 0 ? (
-                            <div className="text-center my-5">
+                            
+                        ):
+                        jobs.length > 0 ? (
+                            
+                            <JobsList jobs={jobs} selectedJob={selectedJob} setSelectedJob={setSelectedJob} />
+                        ):(
+                        <div className="text-center my-5">
                                 <h3 className="text-black">No current positions available</h3>
-                            </div>
-                        ) : (
+                            </div> 
+                        )
+                    }
+
+                    <div className='mt-5' data-aos="zoom-in">
+                        {
+                        selectedJob &&
                             <div className='mt-5 job-form'>
                                 <Form onSubmit={handleSubmit}>
                                     <Row>
                                         <Col md='12' className='mb-3'>
                                             <Label className='int-lbl'>POSITION :</Label>
-                                            <Input
-                                                type="select"
+                                            <p className='text-black'>{selectedJob?.title}</p>
+                                            {/* <Input
+                                                type="text"
                                                 className='int-bg'
                                                 name="position"
-                                                value={formData.position}
-                                                onChange={handleChange}
-                                                required
-                                            >
-                                                <option value="">Select Position</option>
-                                                {positions.map((position, index) => (
-                                                    <option key={index} value={position}>
-                                                        {position}
-                                                    </option>
-                                                ))}
-                                            </Input>
+                                                value={selectedJob?.title}
+                                                // onChange={handleChange}
+                                                // required
+                                                readonly
+                                            /> */}
                                         </Col>
                                         <Col md='12' className='mb-3'>
                                             <Label className='int-lbl'>NAME :</Label>
@@ -237,10 +255,9 @@ const Job = () => {
                                     </Row>
                                 </Form>
                             </div>
-                        )}
+                        }
                     </div>
 
-                       <JobsList/>
                 </Container>
             </section>
             <Footer />

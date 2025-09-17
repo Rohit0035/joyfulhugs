@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.81b1f544.css",
+    "main.js": "/static/js/main.625f92db.js",
+    "static/media/newspaper.png": "/static/media/newspaper.33c4c7a8782856633961.png",
+    "static/media/teamcul-banner.png": "/static/media/teamcul-banner.ee85456cfd9da2431c29.png",
+    "static/media/jointeamhome.png": "/static/media/jointeamhome.e2b2acc7cd80d3f7733c.png",
+    "static/media/contact-bg.png": "/static/media/contact-bg.e5f429de94d922e8d0d1.png",
+    "static/media/team-banner-2.png": "/static/media/team-banner-2.7b37153210561cc2488d.png",
+    "static/media/mb-sl-2.png": "/static/media/mb-sl-2.2def3029644f5e1de634.png",
+    "static/media/mb-sl-1.png": "/static/media/mb-sl-1.60155f94d601282d80d5.png",
+    "static/media/teamcul-1.png": "/static/media/teamcul-1.94b86756e543b54b93a0.png",
+    "static/media/fl-v.png": "/static/media/fl-v.077480935ee2d27a75d9.png",
+    "static/media/member-dhara.png": "/static/media/member-dhara.33b42a662500f3df2299.png",
+    "static/media/joinustaem-mobile.png": "/static/media/joinustaem-mobile.cc2bd647ba5c7660bb02.png",
+    "static/media/teamcul-2.png": "/static/media/teamcul-2.07b0fea8cf0b38668987.png",
+    "static/media/slider-3.jpg": "/static/media/slider-3.9c36f8809895b7e9065d.jpg",
+    "static/media/phlo-bge-n.jpg": "/static/media/phlo-bge-n.a70b3c52dbe1be3cc30e.jpg",
+    "static/media/soon.png": "/static/media/soon.7208da510e461d881632.png",
+    "static/media/square.png": "/static/media/square.ab8388b9ca681f741b31.png",
+    "static/media/slider-2.jpg": "/static/media/slider-2.1dba2c4b49d946ddeadd.jpg",
+    "static/media/slider-1.jpg": "/static/media/slider-1.4778233328392974ff60.jpg",
+    "static/media/mb-sl-3.jpg": "/static/media/mb-sl-3.a14535fe4c8373038a99.jpg",
+    "static/media/logo.png": "/static/media/logo.c7bd8e27fcb01c094676.png",
+    "static/media/teams-mobile-img.jpg": "/static/media/teams-mobile-img.f6ed332be8709f7179b7.jpg",
+    "static/media/member-myk.jpg": "/static/media/member-myk.c5b7350c3915899e82b6.jpg",
+    "static/media/member-udit.jpg": "/static/media/member-udit.62922f0c9da4d5e2a47b.jpg",
+    "index.html": "/index.html",
+    "main.81b1f544.css.map": "/static/css/main.81b1f544.css.map",
+    "main.625f92db.js.map": "/static/js/main.625f92db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.81b1f544.css",
+    "static/js/main.625f92db.js"
+  ]
+}

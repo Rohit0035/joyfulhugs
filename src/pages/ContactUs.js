@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import ChandImg from "../assets/images/coms/chand.png";
 import axios from 'axios';
+import { API_BASE_URL } from '../utils/api-config';
 
 const ContactUs = () => {
 
@@ -52,7 +53,7 @@ const ContactUs = () => {
 
         try {
             const response = await axios.post(
-                'https://joyfulhugs.com/api/send_contact_us_email.php',
+                `${API_BASE_URL}/submit-contact-us-form`,
                 params.toString(),
                 {
                     headers: {
@@ -60,8 +61,8 @@ const ContactUs = () => {
                     }
                 }
             );
-
-            if (response.status === 200 && response.data.status === 'success') {
+            // console.log(response);
+            if (response.data.success) {
                 setStatus('success');
                 setFormData({ name: '', email: '', message: '' });
                 setTimeout(() => {
