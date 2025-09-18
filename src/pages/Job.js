@@ -71,7 +71,6 @@ const Job = () => {
     form.append("job_id", selectedJob?.id);
     form.append("user_name", formData.name);
     form.append("user_email", formData.email);
-    form.append("message", formData.position);
     form.append("answer1", formData.answer1);
     form.append("answer2", formData.answer2);
     form.append("answer3", formData.answer3);
